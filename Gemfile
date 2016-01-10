@@ -14,6 +14,8 @@ gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'
 
+gem 'foundation-rails'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'byebug'

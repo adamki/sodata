@@ -1,0 +1,16 @@
+<%=@ss.count %>
+
+<ul>
+  <% @ss.each do |i| %>
+    <li>
+      date:<%= i.date_reported %>
+      offsence code:<%= i.offense_code %>
+      type: <%= i.offense_type %>
+      location: <%= i.location %>
+      date range end:<%= i.occurred_date_range_end %>
+      zone: <%= i.zone_beat %>
+      hundo location:<%= i.hundred_block_location %>
+      summarized offense:<%= i.summarized_offense_description %>
+    </li>
+  <% end %>
+</ul>
