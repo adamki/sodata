@@ -1,5 +1,3 @@
-require 'soda/client'
-
 class SocrataService
   def initialize
     #client = SODA::Client.new({:domain => "explore.data.gov", :app_token => "TBNGvVuq4DQBygUqztyGbizM4"})
