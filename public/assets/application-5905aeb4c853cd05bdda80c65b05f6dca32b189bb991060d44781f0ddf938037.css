@@ -9775,7 +9775,7 @@ th.hide-for-touch {
 }
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .jumbo {
-  background-image: url("traffic.jpg");
+  background: url(/assets/traffic-8695cd6cb1710dc173430fa6ca932d42210f462d502faabf29d206af3fe2328e.jpg);
   background-size: 100%;
   background-attachment: fixed;
   padding: 175px 0;
