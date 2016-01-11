@@ -1,4 +1,4 @@
-
+<div class="row" id="top-spacer"></div>
 <table role="grid">
   <caption>The last <%= @ss.count %> crimes in the city of Seattle, Washington</caption>
   <thead>
@@ -31,28 +31,33 @@
   </tbody>
 </table>
 
-<div id="map"></div>
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  #map {
-    height: 100%;
-  }
-</style>
+<div class="row">
+  <div class="large-3"></div>
+  <div class="large 6" id="map"></div>
+  <div class="large-3"></div>
+</div>
+
+
+
+
+
+
 
 <script>
+  var locations = [];
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 47.607914, lng: -122.336154},
-      zoom: 8
+      zoom: 15
     });
   }
+
+  <% @ss.each do |crime| %>
+    locations.push(new google.maps.LatLng(<%= crime.location["latitude"] %>,<%= crime.location["longitude"]%>));
+  <% end %>
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcLBwo2NDXZGjkp7wpfgAAsL9q_XXaeo&signed_in=true&callback=initMap"
-    async defer>
+  async defer>
 </script>
