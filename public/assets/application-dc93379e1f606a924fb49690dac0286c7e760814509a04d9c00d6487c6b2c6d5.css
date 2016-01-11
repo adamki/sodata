@@ -9774,6 +9774,13 @@ th.hide-for-touch {
   }
 }
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+.city-thumbnail {
+  height: 177px;
+  width: 100%;
+  background-color: no-repeat;
+}
+
+/* line 7, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .jumbo {
   background: url(/assets/traffic-8695cd6cb1710dc173430fa6ca932d42210f462d502faabf29d206af3fe2328e.jpg);
   background-size: 100%;
@@ -9784,7 +9791,7 @@ th.hide-for-touch {
   height: 800px;
 }
 
-/* line 11, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 17, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .jumbo h1 {
   color: #fff;
   text-align: center;
@@ -9794,46 +9801,46 @@ th.hide-for-touch {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* line 20, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 26, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .contain-to-grid {
   background: rgba(234, 234, 234, 0.8);
 }
 
-/* line 23, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 29, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar {
   background: none;
 }
 
-/* line 26, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 32, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar .name h1 a {
   color: #ea421e;
 }
 
-/* line 30, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 36, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button) {
   background: none;
 }
 
-/* line 35, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 41, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
   background: none;
   text-decoration: underline;
   color: #1a1a1a;
 }
 
-/* line 42, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 48, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar-section ul li > a {
   color: #ea421e;
   font-weight: bold;
 }
 
-/* line 47, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 53, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .active {
   text-decoration: underline;
   font-weight: bold !important;
 }
 
-/* line 52, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 58, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .row:before {
   display: block;
   content: " ";
@@ -9842,89 +9849,89 @@ th.hide-for-touch {
   visibility: hidden;
 }
 
-/* line 61, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 67, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 section {
   padding-bottom: 150px;
 }
 
-/* line 66, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 72, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 ul, ol, dl {
   list-style: none;
 }
 
-/* line 70, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 76, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .th {
   border: none;
   box-shadow: 0 0 0 1px transparent;
   border-radius: 150px;
 }
 
-/* line 76, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 82, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 #portfolio {
   background-color: #ea421e;
 }
 
-/* line 79, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 85, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 #portfolio h2, h4 {
   color: #fff;
   text-align: center;
 }
 
-/* line 84, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 90, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 #portfolio h4 {
   margin-bottom: 30px;
 }
 
-/* line 88, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 94, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 #portfolio img, #about img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 93, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 99, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .f-topbar-fixed {
   padding-top: 0 !important;
 }
 
-/* line 96, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 102, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .social a {
   padding: 0 5px !important;
   font-size: 1.5em !important;
 }
 
-/* line 101, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 107, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 button, .button {
   background-color: #ea421e;
   border-color: #ea421e;
 }
 
-/* line 105, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 111, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 button:hover, .button:hover {
   background-color: rgba(234, 66, 30, 0.5);
   border-color: #ea421e;
 }
 
-/* line 109, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 115, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 h1, h2, h3, h5, h6, a {
   color: #ea421e;
 }
 
-/* line 112, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 118, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 a:hover {
   color: #000;
 }
 
-/* line 116, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 122, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar .toggle-topbar.menu-icon a span:after {
   box-shadow: 0 0 0 1px #ea421e, 0 7px 0 1px #ea421e, 0 14px 0 1px #ea421e;
 }
 
-/* line 120, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 126, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar .toggle-topbar.menu-icon a {
   padding: 0 30px 0 15px;
 }
 
-/* line 124, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+/* line 130, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
 .top-bar .toggle-topbar.menu-icon {
   background: #fff;
   margin-right: 5px;
@@ -9932,13 +9939,13 @@ a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 131, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+  /* line 137, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
   .jumbo {
     margin-bottom: 0;
     padding: 50px 0 10px;
   }
 
-  /* line 136, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
+  /* line 142, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/template.scss */
   .jumbo h1 {
     color: #fff;
     text-align: center;
