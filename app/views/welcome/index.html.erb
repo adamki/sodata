@@ -21,20 +21,20 @@
       <div>
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
           <li>
-            <%= image_tag "image1.jpg"%>
-            <h3 class="text-center">Seattle Crime</h3>
+            <%= image_tag "seattle_skyline.jpg", class: "city-thumbnail" %>
+            <h3 class="text-center"><%= link_to "Seattle Crime", seattle_crime_path%></h3>
             <p>
               These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
               <%= link_to "Continue", seattle_crime_path %>
             </p>
           </li>
           <li>
-            <%= image_tag "image2.jpg"%>
+            <%= image_tag "image2.jpg", class: "city-thumbnail"%>
             <h3 class="text-center">Heading 2</h3>
             <p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
           </li>
           <li>
-            <%= image_tag "image3.jpg"%>
+            <%= image_tag "image3.jpg", class: "city-thumbnail"%>
             <h3 class="text-center">Heading 3</h3>
             <p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
           </li>

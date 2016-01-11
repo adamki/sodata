@@ -1,10 +1,10 @@
-You are viewing <%=@ss.count %> Seattle Crimes.
 
-<table>
+<table role="grid">
+  <caption>The last <%= @ss.count %> crimes in the city of Seattle, Washington</caption>
   <thead>
     <tr>
       <th width="200">Crime</th>
-      <th>Date</th>
+      <th witdh="150">Date</th>
       <th width="150">Date Range End</th>
       <th width="150">Offense Code</th>
       <th width="150">summarized Offense</th>
@@ -15,7 +15,7 @@ You are viewing <%=@ss.count %> Seattle Crimes.
     </tr>
   </thead>
   <tbody>
-        <% @ss.each do |i| %>
+    <% @ss.each do |i| %>
       <tr>
         <td><%= i.date_reported %></td>
         <td><%= i.occurred_date_range_end %></td>
@@ -26,9 +26,7 @@ You are viewing <%=@ss.count %> Seattle Crimes.
         <td><%= i.location["longitude"] %></td>
         <td><%= i.zone_beat %></td>
         <td><%= i.hundred_block_location %></td>
-        <td></td>
       </tr>
-      <% end %>
+    <% end %>
   </tbody>
-            
 </table>
