@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'soda-ruby', :require => 'soda'
+gem 'soda-ruby', require: 'soda'
 gem 'hashie'
 
 gem 'figaro'
@@ -20,6 +20,7 @@ gem 'foreman'
 gem 'foundation-rails'
 
 group :development, :test do
+  gem 'rubocop', require: false
   gem 'pry-rails'
   gem 'byebug'
   gem 'better_errors'
@@ -31,4 +32,3 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-

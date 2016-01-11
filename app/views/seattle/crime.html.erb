@@ -16,17 +16,17 @@
   </thead>
   <tbody>
     <% @ss.each do |i| %>
-      <tr>
-        <td><%= i.date_reported %></td>
-        <td><%= i.occurred_date_range_end %></td>
-        <td><%= i.offense_code %></td>
-        <td><%= i.summarized_offense_description %></td>
-        <td><%= i.offense_type %></td>
-        <td><%= i.location["latitude"] %></td>
-        <td><%= i.location["longitude"] %></td>
-        <td><%= i.zone_beat %></td>
-        <td><%= i.hundred_block_location %></td>
-      </tr>
+    <tr>
+      <td><%= i.date_reported %></td>
+      <td><%= i.occurred_date_range_end %></td>
+      <td><%= i.offense_code %></td>
+      <td><%= i.summarized_offense_description %></td>
+      <td><%= i.offense_type %></td>
+      <td><%= i.location["latitude"] %></td>
+      <td><%= i.location["longitude"] %></td>
+      <td><%= i.zone_beat %></td>
+      <td><%= i.hundred_block_location %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
@@ -38,26 +38,40 @@
 </div>
 
 
+<script  type="text/javascript">
 
-
-
-
-
-<script>
   var locations = [];
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 47.607914, lng: -122.336154},
-      zoom: 15
-    });
-  }
-
   <% @ss.each do |crime| %>
-    locations.push(new google.maps.LatLng(<%= crime.location["latitude"] %>,<%= crime.location["longitude"]%>));
+    locations.push(["crime", <%= crime.location["latitude"] %>, <%= crime.location["longitude"]%>, 3])
   <% end %>
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: new google.maps.LatLng(47.614074707,-122.320777893),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcLBwo2NDXZGjkp7wpfgAAsL9q_XXaeo&signed_in=true&callback=initMap"
-  async defer>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcLBwo2NDXZGjkp7wpfgAAsL9q_XXaeo&signed_in=true&callback=initMap" async defer>
 </script>
