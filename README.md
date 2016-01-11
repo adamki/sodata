@@ -6,9 +6,6 @@
 ---
 title: Self Directed Module Three Final Project
 length: 2 weeks
-tags: Rails, API, Socrata, OAuth, Data, D3, Google Maps JS API, Ruby
-
-type: project
 ---
 
 
