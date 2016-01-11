@@ -5,8 +5,8 @@ class SocrataService
 
   private
 
-  def self.client
-    SODA::Client.new({domain: 'data.seattle.gov',
-                      app_token: ENV['app_token']})
-  end
+    def self.client
+      SODA::Client.new({domain: 'data.seattle.gov',
+                        app_token: ENV['app_token']})
+    end
 end

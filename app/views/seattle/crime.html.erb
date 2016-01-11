@@ -1,35 +1,37 @@
 <div class="row" id="top-spacer"></div>
-<table role="grid">
-  <caption>The last <%= @ss.count %> crimes in the city of Seattle, Washington</caption>
-  <thead>
-    <tr>
-      <th width="200">Crime</th>
-      <th witdh="150">Date</th>
-      <th width="150">Date Range End</th>
-      <th width="150">Offense Code</th>
-      <th width="150">summarized Offense</th>
-      <th width="150">Latitude</th>
-      <th width="150">Longitude</th>
-      <th width="150">Zone/Beat</th>
-      <th width="150">General Location</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @ss.each do |i| %>
-    <tr>
-      <td><%= i.date_reported %></td>
-      <td><%= i.occurred_date_range_end %></td>
-      <td><%= i.offense_code %></td>
-      <td><%= i.summarized_offense_description %></td>
-      <td><%= i.offense_type %></td>
-      <td><%= i.location["latitude"] %></td>
-      <td><%= i.location["longitude"] %></td>
-      <td><%= i.zone_beat %></td>
-      <td><%= i.hundred_block_location %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <table role="grid">
+    <caption>The last <%= @ss.count %> crimes in the city of Seattle, Washington</caption>
+    <thead>
+      <tr>
+        <th width="200">Crime</th>
+        <th witdh="150">Date</th>
+        <th width="150">Date Range End</th>
+        <th width="150">Offense Code</th>
+        <th width="150">summarized Offense</th>
+        <th width="150">Latitude</th>
+        <th width="150">Longitude</th>
+        <th width="150">Zone/Beat</th>
+        <th width="150">General Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @ss.each do |i| %>
+      <tr>
+        <td><%= i.date_reported %></td>
+        <td><%= i.occurred_date_range_end %></td>
+        <td><%= i.offense_code %></td>
+        <td><%= i.summarized_offense_description %></td>
+        <td><%= i.offense_type %></td>
+        <td><%= i.location["latitude"] %></td>
+        <td><%= i.location["longitude"] %></td>
+        <td><%= i.zone_beat %></td>
+        <td><%= i.hundred_block_location %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <div class="row">
   <div class="large-3"></div>

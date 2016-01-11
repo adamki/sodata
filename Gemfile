@@ -16,6 +16,7 @@ gem 'hashie'
 gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'
+gem 'whenever'
 
 gem 'foundation-rails'
 
