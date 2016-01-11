@@ -47,6 +47,6 @@ Just about anybody, in the supported cities will be able to monitor their neighb
 
 If you would like to run this app int local production mode:
 
-# `git clone git@github.com:adamki/sodata.git`
-# `rails s`
+`git clone git@github.com:adamki/sodata.git`
+`rails s`
 
