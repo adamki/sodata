@@ -162,6 +162,7 @@ GEM
       docile (~> 1.1.0)
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
+    simplecov-badge (2.0.2)
     simplecov-html (0.10.0)
     slop (3.6.0)
     soda-ruby (0.2.19)
@@ -219,6 +220,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simplecov
+  simplecov-badge
   soda-ruby
   spring
   turbolinks
