@@ -1,0 +1,2 @@
+module SeattleHelper
+end

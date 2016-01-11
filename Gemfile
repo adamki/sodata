@@ -10,6 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'soda-ruby', :require => 'soda'
+gem 'hashie'
+
 gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'

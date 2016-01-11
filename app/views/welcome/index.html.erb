@@ -22,8 +22,11 @@
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
           <li>
             <%= image_tag "image1.jpg"%>
-            <h3 class="text-center">Heading 1</h3>
-            <p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
+            <h3 class="text-center">Seattle Crime</h3>
+            <p>
+              These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+              <%= link_to "Continue", seattle_crime_path %>
+            </p>
           </li>
           <li>
             <%= image_tag "image2.jpg"%>
@@ -47,30 +50,14 @@
       <h2>Our Recent Work</h2>
       <h4 class="text-center">Some of the best work we have done.</h4>
       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-        <li>
-          <%= image_tag "port1.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port2.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port3.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port4.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port5.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port6.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port7.png", class: "th" %>
-        </li>
-        <li>
-          <%= image_tag "port8.png", class: "th" %>
-        </li>
+        <li><%= image_tag "port1.png", class: "th" %></li>
+        <li><%= image_tag "port2.png", class: "th" %></li>
+        <li><%= image_tag "port3.png", class: "th" %></li>
+        <li><%= image_tag "port4.png", class: "th" %></li>
+        <li><%= image_tag "port5.png", class: "th" %></li>
+        <li><%= image_tag "port6.png", class: "th" %></li>
+        <li><%= image_tag "port7.png", class: "th" %></li>
+        <li><%= image_tag "port8.png", class: "th" %></li>
       </ul>
     </div>
   </div>

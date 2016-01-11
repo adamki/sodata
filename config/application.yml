@@ -11,9 +11,9 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 development:
-  app_token: TBNGvVuq4DQBygUqztyGbizM4
-  secret_token: OC0siXuedNqH5-lSx3rhANFl_RMIKl2OWmfA
+  app_token: xwffIORpk0f1KT1ZtKoXfKUdA
+  secret_token: ugMGF2VftXeeUmB9P5OQmqHZrhGnlZ-fRQ48
 
 production:
-  app_token: TBNGvVuq4DQBygUqztyGbizM4
-  secret_token: OC0siXuedNqH5-lSx3rhANFl_RMIKl2OWmfA
+  app_token: xwffIORpk0f1KT1ZtKoXfKUdA
+  secret_token: ugMGF2VftXeeUmB9P5OQmqHZrhGnlZ-fRQ48
