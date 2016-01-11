@@ -29,16 +29,11 @@ A good project idea should:
 * Be something that real people would want to use to solve a problem
 * Have enough *technical* challenge to be worth your time (as opposed to a *content* challenge)
 
-
-### Project Template
-
-```markdown
-### [Sodata App]
+# Sodata App
 
 ### Pitch
 
-Sodata App is a Crime Data Analysis Application that compares Real Crime Data and Open Data from Socrata API and Bureau of Labor API.
-The end goal is to provide valuable research and Data Anaylsis for Major US cities.
+Sodata App is a Crime Data Analysis Application that compares Real Crime Data and Open Data from Socrata API and Bureau of Labor API. The end goal is to provide valuable research and Data Anaylsis for Major US cities.
  
 ### Problem
 
@@ -48,10 +43,10 @@ Open Data has the potential to inform and educate the general public. I would li
 
 Just about anybody, in the supported cities will be able to monitor their neighborhood Crime levels and filter them by type and date.
 
-```
 ### Instructions
 
 If you would like to run this app int local production mode:
+
 # `git clone git@github.com:adamki/sodata.git`
 # `rails s`
 
