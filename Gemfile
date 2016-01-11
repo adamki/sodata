@@ -21,6 +21,8 @@ gem 'whenever'
 gem 'foundation-rails'
 
 group :development, :test do
+  gem 'simplecov', :require => false, :group => :test
+  gem 'simplecov-badge', :require => false
   gem 'rubocop', require: false
   gem 'pry-rails'
   gem 'byebug'
