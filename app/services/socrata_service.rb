@@ -19,6 +19,7 @@ class SocrataService
         offense_type:           crime_data.offense_type,
         zone_beat:              crime_data.zone_beat
       )
+      Rails.logger.info("updated crimes with: #{crime.offense_description} at:#{Time.now}")
       crime
     end
   end
