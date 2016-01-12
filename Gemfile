@@ -20,6 +20,7 @@ gem 'whenever'
 
 gem 'foundation-rails'
 
+gem "omniauth-google-oauth2"
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
   gem 'rubocop', require: false

@@ -7,12 +7,6 @@
           <%= link_to "Sodata App", root_path%>
         </h1>
       </li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar ">
-        <a href="#">
-          <span>fdsafds</span>
-        </a>
-      </li>
     </ul>
     <section class="top-bar-section">
       <!-- Right Nav Section -->
@@ -20,7 +14,6 @@
         <li>
           <%= link_to "Home", root_path%>
         </li>
-
         <li>
           <a href="#about">About</a>
         </li>
@@ -30,6 +23,15 @@
         <li>
           <a href="#directory">Directory</a>
         </li>
+        <% if current_user %>
+          <li>
+            <%= link_to "Logout", logout_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Login", login_path %>
+          </li>
+        <% end %>
       </ul>
     </section>
   </nav>
