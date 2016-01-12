@@ -15,11 +15,10 @@ gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'
 gem 'whenever', require: false
-gem 'foundation-rails'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'omniauth-google-oauth2'
 gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
-
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
