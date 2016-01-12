@@ -14,7 +14,7 @@ gem 'hashie'
 gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'
-gem 'whenever'
+gem 'whenever', require: false
 gem 'foundation-rails'
 gem 'omniauth-google-oauth2'
 gem 'responders'

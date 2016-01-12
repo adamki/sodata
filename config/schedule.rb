@@ -13,9 +13,10 @@
 #   rake "some:great:rake:task"
 # end
 #
-
-every 30.minutes do
-  runner "SocrataService.seattle_crime(20)"
+if @environment == "production"
+  every 1.minute do
+    runner "SocrataService.new.fetch_seattle_crimes"
+  end
 end
 
 # Learn more: http://github.com/javan/whenever
