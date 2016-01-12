@@ -9,18 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'soda-ruby', require: 'soda'
 gem 'hashie'
-
 gem 'figaro'
 gem 'rails_12factor'
 gem 'foreman'
 gem 'whenever'
-
 gem 'foundation-rails'
-
 gem "omniauth-google-oauth2"
+
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
   gem 'rubocop', require: false
@@ -32,5 +29,4 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
 end

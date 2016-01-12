@@ -16,9 +16,10 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
 
 //Javascript for Magellan navbar
+
+$(function(){ $(document).foundation(); });
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
