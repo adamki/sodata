@@ -10,10 +10,11 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
+
 development:
-  app_token: xwffIORpk0f1KT1ZtKoXfKUdA
-  secret_token: ugMGF2VftXeeUmB9P5OQmqHZrhGnlZ-fRQ48
+  google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
+  google_client_secret: FMLI5i7zc2XSv-LVLIkytpBQ
 
 production:
-  app_token: xwffIORpk0f1KT1ZtKoXfKUdA
-  secret_token: ugMGF2VftXeeUmB9P5OQmqHZrhGnlZ-fRQ48
+  google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
+  google_client_secret: FMLI5i7zc2XSv-LVLIkytpBQ
