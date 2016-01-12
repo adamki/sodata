@@ -6,7 +6,7 @@ class SocrataService
   end
 
   def fetch_seattle_crimes
-    responses = client.get("yamw-xkh3", { "$limit" => 1000 })
+    responses = client.get("yamw-xkh3", { "$limit" => 100 })
     responses.each do |crime_data|
       crime = Crime.find_or_create_by( date_reported: crime_data.date_reported )
       crime.update_attributes(
@@ -21,6 +21,10 @@ class SocrataService
       )
       crime
     end
+  end
+
+  def self.print_text
+    puts "Hello"
   end
 
   private
