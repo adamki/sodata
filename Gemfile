@@ -17,8 +17,6 @@ gem 'foreman'
 gem 'whenever'
 gem 'foundation-rails'
 gem 'omniauth-google-oauth2'
-gem 'responders'
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test

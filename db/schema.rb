@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20160112044533) do
     t.string   "date_reported"
     t.string   "zone_beat"
     t.string   "hundred_block_location"
-    t.string   "summarized_offense_description"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "offense_description"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|

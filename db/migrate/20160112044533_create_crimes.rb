@@ -8,7 +8,7 @@ class CreateCrimes < ActiveRecord::Migration
       t.string :date_reported
       t.string :zone_beat
       t.string :hundred_block_location
-      t.string :summarized_offense_description
+      t.string :offense_description
 
       t.timestamps null: false
     end
