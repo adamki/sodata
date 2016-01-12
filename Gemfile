@@ -16,7 +16,7 @@ gem 'rails_12factor'
 gem 'foreman'
 gem 'whenever'
 gem 'foundation-rails'
-gem "omniauth-google-oauth2"
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
