@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latitude: MyString
+  longitude: MyString
+  offense_code: MyString
+  offense_type: MyString
+  date_reported: MyString
+  zone_beat: MyString
+  hundred_block_location: MyString
+  summarized_offense_description: MyString
+
+two:
+  latitude: MyString
+  longitude: MyString
+  offense_code: MyString
+  offense_type: MyString
+  date_reported: MyString
+  zone_beat: MyString
+  hundred_block_location: MyString
+  summarized_offense_description: MyString
