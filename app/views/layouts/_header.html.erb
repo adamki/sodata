@@ -1,38 +1,19 @@
-<div id="top"></div>
-<div class="contain-to-grid fixed">
-  <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <h1>
-          <%= link_to "Sodata App", root_path%>
-        </h1>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul id="nav" class="right">
-        <li>
-          <%= link_to "Home", root_path%>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#directory">Directory</a>
-        </li>
-        <% if current_user %>
-          <li>
-            <%= link_to "Logout", logout_path %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "Login", login_path %>
-          </li>
-        <% end %>
-      </ul>
-    </section>
-  </nav>
+<div class="ui secondary pointing menu">
+  <%= link_to "Sodata App", root_path, class: "item" %>
+  <a class="item">
+    Cities
+  </a>
+  <div class="right menu">
+    <% if current_user %>
+      <a class="ui item">
+        Welcome, <%= current_user.first_name %>  <%= current_user.last_name %>
+      </a>
+      <a class="item">
+        Profile
+      </a>
+      <%= link_to "Logout", logout_path, class:"ui item"%>
+    <% else %>
+      <%= link_to "Login", login_path, class:"ui item"%>
+    <% end %>
+  </div>
 </div>
