@@ -7,4 +7,10 @@ Rails.application.routes.draw do
 
   get "dashboard", to: "dashboard#show"
   match 'seattle/crime' => 'seattle#crime', :via => :get
+
+  namespace :api do
+    namespace :v1 do
+      resources :crimes, only: [:index]
+    end
+  end
 end
