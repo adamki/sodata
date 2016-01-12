@@ -1,7 +1,7 @@
 <div class="ui secondary pointing menu">
   <%= link_to "Sodata App", root_path, class: "item" %>
   <a class="item">
-    Cities 
+    Cities
   </a>
   <div class="right menu">
     <% if current_user %>
@@ -9,7 +9,7 @@
         Welcome, <%= current_user.first_name %>  <%= current_user.last_name %>
       </a>
       <a class="item">
-        Profile 
+        Profile
       </a>
       <%= link_to "Logout", logout_path, class:"ui item"%>
     <% else %>

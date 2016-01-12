@@ -1,165 +1,98 @@
-<div class="ui special cards">
-  <div class="ui three column grid">
-    <div class="column">
-      <div class="ui fluid card">
-        <div class="blurring dimmable image">
-          <div class="ui dimmer">
-            <div class="content">
-              <div class="center">
-                <div class="ui inverted button">Add Friend</div>
-              </div>
-            </div>
-          </div>
-          <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
-        </div>
-        <div class="content">
-          <a class="header">Seattle Crime</a>
-        </div>
-        <div class="extra content">
-          <p>
-            These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
-          </p>
-          <%= link_to "Continue", seattle_crime_path %>
-        </div>
-      </div>
-    </div>
+<div class="ui inverted vertical masthead center aligned segment" id="animated-gif-container">
+  <div class="ui text container">
+    <h1 class="ui inverted header">Sodata App</h1>
+    <h2>Keeping the market informed and Safe.</h2>
 
-    <div class="column">
-      <div class="ui fluid card">
-        <div class="blurring dimmable image">
-          <div class="ui dimmer">
-            <div class="content">
-            </div>
-          </div>
-          <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
-        </div>
-        <div class="content">
-          <a class="header">Seattle Crime</a>
-        </div>
-        <div class="extra content">
-          <p>
-            These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
-          </p>
-          <%= link_to "Continue", seattle_crime_path %>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="ui fluid card">
-        <div class="blurring dimmable image">
-          <div class="ui dimmer">
-            <div class="content">
-            </div>
-          </div>
-          <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
-        </div>
-        <div class="content">
-          <a class="header">Seattle Crime</a>
-        </div>
-        <div class="extra content">
-          <p>
-            These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
-          </p>
-          <%= link_to "Continue", seattle_crime_path %>
-        </div>
-      </div>
-      </div>
-    </div>
+    <button class="ui google plus large button">
+      <i class="google plus icon"></i>
+      <%= link_to 'Start With Google+', login_path, class: 'large button' %>
+    </button>
   </div>
 </div>
 
+<div class="ui vertical stripe segment">
+  <div class="ui special cards">
+    <div class="ui three column grid">
+
+      <div class="two wide column"></div>
+      <div class="four wide column">
+
+          <div class="ui fluid card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted red large button">
+                      <%= link_to "See More", seattle_crime_path, class:  "no-link-style"%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+            </div>
+            <div class="content">
+              <%= link_to "Seattle Crime", seattle_crime_path, class: "header" %>
+            </div>
+            <div class="extra content">
+              <p>
+                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+              </p>
+              <%= link_to "Continue", seattle_crime_path %>
+            </div>
+          </div>
+        </div>
 
 
+        <div class="four wide column">
+          <div class="ui fluid card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted red large button">See More</div>
+                  </div>
+                </div>
+              </div>
+              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+            </div>
+            <div class="content">
+              <a class="header">Seattle Crime</a>
+            </div>
+            <div class="extra content">
+              <p>
+                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+              </p>
+              <%= link_to "Continue", seattle_crime_path %>
+            </div>
+          </div>
+        </div>
 
+        <div class="four wide column">
+          <div class="ui fluid card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted red large button">See More</div>
+                  </div>
+                </div>
+              </div>
+              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+            </div>
+            <div class="content">
+              <a class="header">Seattle Crime</a>
+            </div>
+            <div class="extra content">
+              <p>
+                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+              </p>
+              <%= link_to "Continue", seattle_crime_path %>
+            </div>
+          </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="jumbo">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1>Sodata App</h1>
-      <p class="text-center">
-        <%= link_to 'Start With Google+', login_path, class: 'large button' %>
-      </p>
+        </div>
+      <div class="two wide column"></div>
     </div>
   </div>
-</section>
-
-<section id="about">
-  <div class="row">
-    <div class="small-12 large-12 columns">
-      <div class="text-center">
-        <h2>Intelligent Crime Data Analysis</h2>
-        <p>
-          The reason for I built this app is to discover just what sort of crime is happening every day all around you. Open data has the potential to change the world and I want to use every bit of Data that I can find.
-        </p>
-      </div>
-      <div>
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-          <li>
-            <%= image_tag "image2.jpg", class: "city-thumbnail"%>
-            <h3 class="text-center">Heading 2</h3>
-            <p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
-          </li>
-          <li>
-            <%= image_tag "image3.jpg", class: "city-thumbnail"%>
-            <h3 class="text-center">Heading 3</h3>
-            <p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio">
-  <div class="row">
-    <div class="large-12 columns">
-      <h2>Our Recent Work</h2>
-      <h4 class="text-center">Some of the best work we have done.</h4>
-      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-        <li><%= image_tag "port1.png", class: "th" %></li>
-        <li><%= image_tag "port2.png", class: "th" %></li>
-        <li><%= image_tag "port3.png", class: "th" %></li>
-        <li><%= image_tag "port4.png", class: "th" %></li>
-        <li><%= image_tag "port5.png", class: "th" %></li>
-        <li><%= image_tag "port6.png", class: "th" %></li>
-        <li><%= image_tag "port7.png", class: "th" %></li>
-        <li><%= image_tag "port8.png", class: "th" %></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<script type = "text/javascript">
-  $('.special.cards .image').dimmer({
-    on: 'hover'
-  });
-</script>
+</div>

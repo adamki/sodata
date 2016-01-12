@@ -1,8 +1,8 @@
 class SocrataService
   attr_reader :client
 
-  def initialize 
-    @client ||= SODA::Client.new({:domain => "data.seattle.gov", :app_token => ENV["socrata_app_token"]}) 
+  def initialize
+    @client ||= SODA::Client.new({:domain => "data.seattle.gov", :app_token => ENV["socrata_app_token"]})
   end
 
   def fetch_seattle_crimes
@@ -20,6 +20,8 @@ class SocrataService
         zone_beat:              crime_data.zone_beat
       )
       Rails.logger.info("updated crimes with: #{crime.offense_description} at:#{Time.now}")
+
+      
       crime.save
       crime
     end

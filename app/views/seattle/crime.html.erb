@@ -1,46 +1,16 @@
-<div class="row">
-  <table role="grid">
-    <caption>The last <%= @seattle_crimes.count %> crimes in the city of Seattle, Washington</caption>
-    <thead>
-      <tr>
-        <th width="200">Crime</th>
-        <th witdh="150">Date</th>
-        <th width="150">Date Range End</th>
-        <th width="150">Offense Code</th>
-        <th width="150">summarized Offense</th>
-        <th width="150">Latitude</th>
-        <th width="150">Longitude</th>
-        <th width="150">Zone/Beat</th>
-        <th width="150">General Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @seattle_crimes.each do |i| %>
-      <tr>
-        <td><%= i.date_reported %></td>
-        <td><%#= i.occurred_date_range_end %></td>
-        <td><%= i.offense_code %></td>
-        <td><%= i.offense_description %></td>
-        <td><%= i.offense_type %></td>
-        <td><%= i.latitude %></td>
-        <td><%= i.longitude %></td>
-        <td><%= i.zone_beat %></td>
-        <td><%= i.hundred_block_location %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+
+
+
+<div class="ui column centered grid raised  padded text  segment ">
+  <div class="ui header" id="map"></div>
 </div>
 
-<div class="row">
-  <div class="large-3"></div>
-  <div class="large 6" id="map"></div>
-  <div class="large-3"></div>
-</div>
 
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcLBwo2NDXZGjkp7wpfgAAsL9q_XXaeo&signed_in=true&callback=initMap" async defer>
+</script>
 
 <script  type="text/javascript">
-
   var locations = [];
   <% @seattle_crimes.each do |crime| %>
     locations.push(["crime", <%= crime.latitude %>, <%= crime.longitude%>, 3])
@@ -54,7 +24,6 @@
     });
 
     var infowindow = new google.maps.InfoWindow();
-
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {
@@ -62,7 +31,6 @@
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
       });
-
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           infowindow.setContent(locations[i][0]);
@@ -71,8 +39,4 @@
       })(marker, i));
     }
   }
-</script>
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcLBwo2NDXZGjkp7wpfgAAsL9q_XXaeo&signed_in=true&callback=initMap" async defer>
 </script>
