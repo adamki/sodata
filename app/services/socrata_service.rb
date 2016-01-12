@@ -20,6 +20,7 @@ class SocrataService
         zone_beat:              crime_data.zone_beat
       )
       Rails.logger.info("updated crimes with: #{crime.offense_description} at:#{Time.now}")
+      crime.save
       crime
     end
   end
