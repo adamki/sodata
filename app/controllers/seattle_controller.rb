@@ -1,6 +1,5 @@
 class SeattleController < ApplicationController
   def crime
-    socrata_service = SocrataService.new
-    @seattle_crimes = socrata_service.fetch_seattle_crimes
+    @seattle_crimes = Crime.all
   end
 end
