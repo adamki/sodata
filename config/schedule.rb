@@ -13,7 +13,7 @@
 #   rake "some:great:rake:task"
 # end
 #
-if @environment == "production"
+if @environment == "production" || @environment == "development"
   every 1.minute do
     runner "SocrataService.new.fetch_seattle_crimes"
   end

@@ -18,12 +18,12 @@
       <% @seattle_crimes.each do |i| %>
       <tr>
         <td><%= i.date_reported %></td>
-        <td><%= i.occurred_date_range_end %></td>
+        <td><%#= i.occurred_date_range_end %></td>
         <td><%= i.offense_code %></td>
-        <td><%= i.summarized_offense_description %></td>
+        <td><%= i.offense_description %></td>
         <td><%= i.offense_type %></td>
-        <td><%= i.location["latitude"] %></td>
-        <td><%= i.location["longitude"] %></td>
+        <td><%= i.latitude %></td>
+        <td><%= i.longitude %></td>
         <td><%= i.zone_beat %></td>
         <td><%= i.hundred_block_location %></td>
       </tr>
@@ -43,7 +43,7 @@
 
   var locations = [];
   <% @seattle_crimes.each do |crime| %>
-    locations.push(["crime", <%= crime.location["latitude"] %>, <%= crime.location["longitude"]%>, 3])
+    locations.push(["crime", <%= crime.latitude %>, <%= crime.longitude%>, 3])
   <% end %>
 
   function initMap() {
