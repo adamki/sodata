@@ -7,22 +7,23 @@ class SocrataService
 
   def fetch_seattle_crimes
     responses = client.get("yamw-xkh3", { "$limit" => 1000 })
-    responses.each do |crime|
-      Crime.create!(
-        date_reported:          crime.date_reported,
-        latitude:               crime.location.latitude,
-        longitude:              crime.location.longitude,
-        hundred_block_location: crime.hundred_block_location,
-        offense_description:    crime.summarized_offense_description,
-        offense_code:           crime.offense_code,
-        offense_type:           crime.offense_type,
-        zone_beat:              crime.zone_beat
+    responses.each do |crime_data|
+      crime = Crime.find_or_create_by( date_reported: crime_data.date_reported )
+      crime.update_attributes(
+        date_reported:          crime_data.date_reported,
+        latitude:               crime_data.location.latitude,
+        longitude:              crime_data.location.longitude,
+        hundred_block_location: crime_data.hundred_block_location,
+        offense_description:    crime_data.summarized_offense_description,
+        offense_code:           crime_data.offense_code,
+        offense_type:           crime_data.offense_type,
+        zone_beat:              crime_data.zone_beat
       )
+      crime
     end
   end
 
   private
-
     def self.client
       SODA::Client.new({domain: 'data.seattle.gov',
                         app_token: ENV['app_token']})
