@@ -8,7 +8,7 @@ one:
   date_reported: MyString
   zone_beat: MyString
   hundred_block_location: MyString
-  summarized_offense_description: MyString
+  offense_description: MyString
 
 two:
   latitude: MyString
@@ -18,4 +18,4 @@ two:
   date_reported: MyString
   zone_beat: MyString
   hundred_block_location: MyString
-  summarized_offense_description: MyString
+  offense_description: MyString

@@ -7,5 +7,6 @@ class CrimeSerializer < ActiveModel::Serializer
              :offense_description,
              :offense_type,
              :zone_beat
+
   
 end
