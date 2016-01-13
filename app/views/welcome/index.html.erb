@@ -1,12 +1,20 @@
 <div class="ui inverted vertical masthead center aligned segment" id="animated-gif-container">
-  <div class="ui text container">
+  <div class="ui text container" id="header-stripe">
     <h1 class="ui inverted header">Sodata App</h1>
     <h2>Open Data Crime Analysis to help prevent bike thefts.</h2>
-
-    <button class="ui google plus large button">
-      <i class="google plus icon"></i>
-      <%= link_to 'Start With Google+', login_path, class: 'large button' %>
-    </button>
+    <% if !current_user %>
+      <button class="ui large red button">
+        <div class="ui animated fade labeled button ui google plus large button red" tabindex="0">
+          <div class="visible content large button red">
+            Get Started Now
+            <i class="google plus icon"></i>
+          </div>
+          <div class="hidden content">
+            <%= link_to 'Google+', login_path, class: 'large button red' %>
+          </div>
+        </div>
+      </button>
+    <% end %>
   </div>
 </div>
 
