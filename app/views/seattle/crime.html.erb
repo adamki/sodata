@@ -13,6 +13,7 @@
 <script  type="text/javascript">
   var locations= [];
   var thefts = [];
+  var bike_racks = [];
 
   <% @seattle_crimes.each do |crime| %>
     locations.push(["crime", <%= crime.latitude %>, <%= crime.longitude%>, 3])
@@ -22,7 +23,9 @@
     thefts.push(["theft", <%= theft.latitude %>, <%= theft.longitude%>, 3])
   <% end %>
 
-  console.log(thefts)
+  <% @bike_racks.each do |bike_rack| %>
+    bike_racks.push(["rack", <%= bike_rack.latitude %>, <%= bike_rack.longitude%>, 3])
+  <% end %>
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -32,12 +35,13 @@
     });
 
     var infowindow = new google.maps.InfoWindow();
-    var marker, theft, i, k;
+    var marker, theft, rack, i, j, k;
 
     for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
+        map: map,
+        icon:  'https://maps.google.com/mapfiles/kml/shapes/schools_maps.png'
       });
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
@@ -48,20 +52,33 @@
     }
 
 
-    for (k = 0; k < thefts.length; k++) {
+    for (j = 0; j < thefts.length; j++) {
       theft = new google.maps.Marker({
-        position: new google.maps.LatLng(thefts[k][1], thefts[k][2]),
+        position: new google.maps.LatLng(thefts[j][1], thefts[j][2]),
         map: map,
-        icon:  'https://maps.google.com/mapfiles/kml/shapes/cycling.png',
+        icon:  'https://maps.google.com/mapfiles/kml/shapes/cycling.png'
       });
 
-      google.maps.event.addListener(theft, 'click', (function(theft, k) {
+      google.maps.event.addListener(theft, 'click', (function(theft, j) {
         return function() {
-          infowindow.setContent(thefts[k][0]);
+          infowindow.setContent(thefts[j][0]);
           infowindow.open(map, theft);
         }
-      })(theft, k));
+      })(theft, j));
     }
 
+    for (k = 0; k < bike_racks.length; k++) {
+      rack = new google.maps.Marker({
+        position: new google.maps.LatLng(bike_racks[k][1], bike_racks[k][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(rack, 'click', (function(rack, k) {
+        return function() {
+          infowindow.setContent(bike_racks[k][0]);
+          infowindow.open(map, rack);
+        }
+      })(rack, k));
+    }
   }
 </script>

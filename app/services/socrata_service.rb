@@ -2,21 +2,25 @@ class SocrataService
   attr_reader :client
 
   def initialize
-    @client ||= SODA::Client.new({:domain => "data.seattle.gov", 
-                                  :app_token => ENV["socrata_app_token"]})
+    @client ||= SODA::Client.new({
+      :domain => "data.seattle.gov", 
+      :app_token => ENV["socrata_app_token"]
+    })
   end
 
-  def fetch_seattle_crimes
-    response = client.get("yamw-xkh3", { "$limit" => 100 })
+  def fetch_crimes
+    client.get("yamw-xkh3", 
+               { "$limit" => 50 })
   end
 
-  def fetch_bike_thefts
-    responses = client.get("cd63-bj4a")
+  def fetch_thefts
+    client.get("yamw-xkh3", 
+               {"$where"  => "offense_code = '2399'", "$limit" => 20})
   end
 
-  private
-    def self.client
-      SODA::Client.new({domain: 'data.seattle.gov',
-                        app_token: ENV['app_token']})
-    end
+  def fetch_bike_racks
+    client.get("svqu-nfve", 
+               {"$limit" => 100})
+  end
+
 end
