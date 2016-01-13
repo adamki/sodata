@@ -14,7 +14,6 @@ class SocrataService
     responses = client.get("cd63-bj4a")
   end
 
-
   private
     def self.client
       SODA::Client.new({domain: 'data.seattle.gov',
