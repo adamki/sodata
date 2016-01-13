@@ -11,10 +11,18 @@
 </script>
 
 <script  type="text/javascript">
-  var locations = [];
+  var locations= [];
+  var thefts = [];
+
   <% @seattle_crimes.each do |crime| %>
     locations.push(["crime", <%= crime.latitude %>, <%= crime.longitude%>, 3])
   <% end %>
+
+  <% @bike_thefts.each do |theft| %>
+    thefts.push(["theft", <%= theft.latitude %>, <%= theft.longitude%>, 3])
+  <% end %>
+
+  console.log(thefts)
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -24,7 +32,7 @@
     });
 
     var infowindow = new google.maps.InfoWindow();
-    var marker, i;
+    var marker, theft, i, k;
 
     for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
@@ -38,5 +46,22 @@
         }
       })(marker, i));
     }
+
+
+    for (k = 0; k < thefts.length; k++) {
+      theft = new google.maps.Marker({
+        position: new google.maps.LatLng(thefts[k][1], thefts[k][2]),
+        map: map,
+        icon:  'https://maps.google.com/mapfiles/kml/shapes/cycling.png',
+      });
+
+      google.maps.event.addListener(theft, 'click', (function(theft, k) {
+        return function() {
+          infowindow.setContent(thefts[k][0]);
+          infowindow.open(map, theft);
+        }
+      })(theft, k));
+    }
+
   }
 </script>
