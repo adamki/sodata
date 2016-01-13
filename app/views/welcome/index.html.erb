@@ -1,12 +1,20 @@
 <div class="ui inverted vertical masthead center aligned segment" id="animated-gif-container">
-  <div class="ui text container">
+  <div class="ui text container" id="header-stripe">
     <h1 class="ui inverted header">Sodata App</h1>
-    <h2>Keeping the market informed and Safe.</h2>
-
-    <button class="ui google plus large button">
-      <i class="google plus icon"></i>
-      <%= link_to 'Start With Google+', login_path, class: 'large button' %>
-    </button>
+    <h2>Open Data Crime Analysis to help prevent bike thefts.</h2>
+    <% if !current_user %>
+      <button class="ui large red button">
+        <div class="ui animated fade labeled button ui google plus large button red" tabindex="0">
+          <div class="visible content large button red">
+            Get Started Now
+            <i class="google plus icon"></i>
+          </div>
+          <div class="hidden content">
+            <%= link_to 'Google+', login_path, class: 'large button red' %>
+          </div>
+        </div>
+      </button>
+    <% end %>
   </div>
 </div>
 
@@ -35,9 +43,9 @@
             </div>
             <div class="extra content">
               <p>
-                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+                Incidents are based on initial police reports taken by officers when responding to crimes around the city. This information is published within 6 - 12 hours after the report is filed into the system.
               </p>
-              <%= link_to "Continue", seattle_crime_path %>
+              <%= link_to "See Crime Map", seattle_crime_path %>
             </div>
           </div>
         </div>
@@ -49,20 +57,22 @@
               <div class="ui dimmer">
                 <div class="content">
                   <div class="center">
-                    <div class="ui inverted red large button">See More</div>
+                    <div class="ui inverted red large button">
+                      <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="no-link-style">Seattle Bike Blog</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
             </div>
             <div class="content">
-              <a class="header">Seattle Crime</a>
+              <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="header no-link-style">Tips from a Pro</a>
             </div>
             <div class="extra content">
               <p>
-                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+                Seattle Police received 581 stolen bike reports January through May in 2015, according to police report data at data.seattle.gov. This is a problem that can be solved by following these simple tips and practices.
               </p>
-              <%= link_to "Continue", seattle_crime_path %>
+              <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank">Seattle Bike Blog</a>
             </div>
           </div>
         </div>
@@ -73,18 +83,18 @@
               <div class="ui dimmer">
                 <div class="content">
                   <div class="center">
-                    <div class="ui inverted red large button">See More</div>
+                    <div class="ui inverted red large button">Manage Account</div>
                   </div>
                 </div>
               </div>
               <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
             </div>
             <div class="content">
-              <a class="header">Seattle Crime</a>
+              <a class="header">Bike Registration</a>
             </div>
             <div class="extra content">
               <p>
-                These incidents are based on initial police reports taken by officers when responding to incidents around the city. The information enters our Records Management System (RMS) and is then transmitted out to data.seattle.gov. This information is published within 6 to 12 hours after the report is filed into the system.
+                Adding a bike and registering it with a Serial number can help recover your bike in the case of theft. It is simple and easy to register and manage your bike(s) with us. Simply click here to get started today.
               </p>
               <%= link_to "Continue", seattle_crime_path %>
             </div>
