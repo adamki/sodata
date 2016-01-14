@@ -21,7 +21,7 @@
 </script>
 
 <script  type="text/javascript">
-  var locations= [];
+  var locations = [];
   var thefts = [];
   var bike_racks = [];
 
@@ -47,70 +47,48 @@
     var infowindow = new google.maps.InfoWindow();
     var marker, theft, rack, i, j, k;
 
-    for (i = 0; i < locations.length; i++) {
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map,
-        icon:  'https://maps.google.com/mapfiles/kml/shapes/schools_maps.png'
-      });
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
+    function plotMarker(collection){
+      for (i = 0; i < collection.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(collection[i][1], collection[i][2]),
+          map: map,
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(collection[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
     }
 
+    plotMarker(locations);
+    plotMarker(thefts);
+    plotMarker(bike_racks);
 
-    for (j = 0; j < thefts.length; j++) {
-      theft = new google.maps.Marker({
-        position: new google.maps.LatLng(thefts[j][1], thefts[j][2]),
-        map: map,
-        icon:  'https://maps.google.com/mapfiles/kml/shapes/cycling.png'
-      });
+    var input = /** @type {!HTMLInputElement} */(
+        document.getElementById('pac-input'));
 
-      google.maps.event.addListener(theft, 'click', (function(theft, j) {
-        return function() {
-          infowindow.setContent(thefts[j][0]);
-          infowindow.open(map, theft);
-        }
-      })(theft, j));
-    }
+    console.log(input.value);
 
-    for (k = 0; k < bike_racks.length; k++) {
-      rack = new google.maps.Marker({
-        position: new google.maps.LatLng(bike_racks[k][1], bike_racks[k][2]),
-        map: map
-      });
+    var types = document.getElementById('type-selector');
 
-      google.maps.event.addListener(rack, 'click', (function(rack, k) {
-        return function() {
-          infowindow.setContent(bike_racks[k][0]);
-          infowindow.open(map, rack);
-        }
-      })(rack, k));
-    }
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
-  var input = /** @type {!HTMLInputElement} */(
-      document.getElementById('pac-input'));
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
 
-  var types = document.getElementById('type-selector');
+    var infowindow = new google.maps.InfoWindow();
 
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
+    autocomplete.addListener('place_changed', function() {
 
-  var autocomplete = new google.maps.places.Autocomplete(input);
-  autocomplete.bindTo('bounds', map);
-
-  var infowindow = new google.maps.InfoWindow();
-
-  autocomplete.addListener('place_changed', function() {
     infowindow.close();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
 
     if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
+      window.alert("Try searching for Something Else");
       return;
     }
 
@@ -157,6 +135,22 @@
     setupClickListener('changetype-address', ['address']);
     setupClickListener('changetype-establishment', ['establishment']);
     setupClickListener('changetype-geocode', ['geocode']);
-  }
+
+    function getGeolocation(location){
+      console.log(location);
+    };
+
+    var geocoder;
+    var map;
+    function initialize() {
+      geocoder = new google.maps.Geocoder();
+      var latlng = new google.maps.LatLng(-34.397, 150.644);
+      var mapOptions = {
+        zoom: 8,
+        center: latlng
+      }
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    };
+  } // end of  initMap()
 
 </script>
