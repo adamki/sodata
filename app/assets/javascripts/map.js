@@ -31,9 +31,9 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
-    //////////////////////////////////////////////////////////
-      // GEOCODERZZZZZZZZZZZZZ 
-    //////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+  // GEOCODERZZZZZZZZZZZZZ 
+//////////////////////////////////////////////////////////
     
     function socrataData(lat, lng){
       return $.ajax({
@@ -99,7 +99,10 @@ function initAutocomplete() {
           }
         })(place, k));
       }
+      console.log(results.length)
+      results =[]
     }
+
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
