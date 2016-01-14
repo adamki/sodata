@@ -41,8 +41,8 @@ function initAutocomplete() {
         url: "/seattle/bike_thefts",
         data: {lat: lat, lng: lng},
         success: function(result){
-          var wowWow = api_places.concat(result);
-          doesThisWork(wowWow);
+          var results = markers.concat(result);
+          addMarkers(results);
         }, 
         error: function(xhr){
           console.log(xhr.responseText)
@@ -83,10 +83,9 @@ function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
-    var api_places = [];
 
     // For each place, get the icon, name and location.
-    function doesThisWork(results){
+    function addMarkers(results){
       for (var k = 0; k < results.length; k++) {
         place = new google.maps.Marker({
           position: new google.maps.LatLng(results[k][1], results[k][2]),
