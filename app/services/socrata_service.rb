@@ -8,7 +8,8 @@ class SocrataService
     })
   end
 
-  def fetch_crimes
+  def fetch_crimes(lat, lng)
+    binding.pry
     client.get("yamw-xkh3", 
                { "$limit" => 50 })
   end
