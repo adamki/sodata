@@ -41,9 +41,8 @@ function initAutocomplete() {
         url: "/seattle/bike_thefts",
         data: {lat: lat, lng: lng},
         success: function(result){
-          result.forEach(function(r){
-             api_places.push(r)
-          })
+          var wowWow = api_places.concat(result);
+          doesThisWork(wowWow);
         }, 
         error: function(xhr){
           console.log(xhr.responseText)
@@ -84,25 +83,24 @@ function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
-    var k;
     var api_places = [];
 
     // For each place, get the icon, name and location.
-    for (k = 0; k < api_places.length; k++) {
-      debugger
-      place = new google.maps.Marker({
-        position: new google.maps.LatLng(api_places[k][1], api_places[k][2]),
-        map: map,
-      });
+    function doesThisWork(results){
+      for (var k = 0; k < results.length; k++) {
+        place = new google.maps.Marker({
+          position: new google.maps.LatLng(results[k][1], results[k][2]),
+          map: map,
+        });
 
-      google.maps.event.addListener(place, 'click', (function(place, k) {
-        return function() {
-          infowindow.setContent(api_places[k][0]);
-          infowindow.open(map, place);
-        }
-      })(place, k));
+        google.maps.event.addListener(place, 'click', (function(place, k) {
+          return function() {
+            infowindow.setContent(results[k][0]);
+            infowindow.open(map, place);
+          }
+        })(place, k));
+      }
     }
-
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
