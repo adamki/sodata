@@ -2,13 +2,10 @@ class SeattleController < ApplicationController
   respond_to :json
 
   def crime
-    socrata_service = SocrataService.new
-    @bike_thefts = socrata_service.fetch_thefts
-    @bike_racks = socrata_service.fetch_bike_racks
   end
 
-  def get_crimes
+  def bike_thefts 
     socrata_service = SocrataService.new
-    respond_with socrata_service.fetch_crimes(params[:lat], params[:lng])
+    respond_with socrata_service.bike_thefts(params[:lat], params[:lng])
   end
 end

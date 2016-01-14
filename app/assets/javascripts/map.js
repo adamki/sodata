@@ -1,7 +1,11 @@
+//////////////////////////////////////////////////////////
+  // INITIALIZE MAP 
+//////////////////////////////////////////////////////////
+
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13,
+    center: {lat: 47.612926, lng: -122.336815},
+    zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 
@@ -27,23 +31,22 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
-
     //////////////////////////////////////////////////////////
       // GEOCODERZZZZZZZZZZZZZ 
     //////////////////////////////////////////////////////////
     
-
-    
     function socrataData(lat, lng){
       return $.ajax({
         type: "GET",
-        url: "/seattle/get_crimes",
+        url: "/seattle/bike_thefts",
         data: {lat: lat, lng: lng},
-        success: function(){
-          console.log("woot")
+        success: function(result){
+          result.forEach(function(r){
+             api_places.push(r)
+          })
         }, 
         error: function(xhr){
-          console.log("lame")
+          console.log(xhr.responseText)
         }
       })
     }
@@ -81,8 +84,25 @@ function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
+    var k;
+    var api_places = [];
 
     // For each place, get the icon, name and location.
+    for (k = 0; k < api_places.length; k++) {
+      debugger
+      place = new google.maps.Marker({
+        position: new google.maps.LatLng(api_places[k][1], api_places[k][2]),
+        map: map,
+      });
+
+      google.maps.event.addListener(place, 'click', (function(place, k) {
+        return function() {
+          infowindow.setContent(api_places[k][0]);
+          infowindow.open(map, place);
+        }
+      })(place, k));
+    }
+
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {

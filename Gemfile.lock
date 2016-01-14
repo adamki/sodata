@@ -77,9 +77,14 @@ GEM
       thor (~> 0.14)
     foreman (0.78.0)
       thor (~> 0.19.1)
+    geokit (1.10.0)
+    geokit-rails (2.1.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.3)
+    hurley (0.2)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -235,7 +240,9 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   figaro
   foreman
+  geokit-rails
   hashie
+  hurley
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-google-oauth2
