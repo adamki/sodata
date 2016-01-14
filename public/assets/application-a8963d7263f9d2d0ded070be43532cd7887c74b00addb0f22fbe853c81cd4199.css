@@ -37867,18 +37867,26 @@ a.large.button {
   }
 }
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
-#map {
-  height: 600px;
-  width: 80%;
-  border-radius: 16px 16px;
-  border-color: #fff;
-  border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
-  border-width: 7px;
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* line 12, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 3, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+#map-box {
+  height: 80%;
+  padding: 0px;
+}
+
+/* line 8, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+#map {
+  height: 100%;
+  width: 100%;
+  box-shadow: 2px 2px 10px #B1B1B1;
+}
+
+/* line 19, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
@@ -37890,7 +37898,7 @@ a.large.button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* line 23, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 30, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
@@ -37899,27 +37907,27 @@ a.large.button {
   margin-left: 12px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
-  width: 300px;
+  width: 500px;
 }
 
-/* line 34, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 41, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 #pac-input:focus {
   border-color: #4d90fe;
 }
 
-/* line 38, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 45, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 .pac-container {
   font-family: Roboto;
 }
 
-/* line 42, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 49, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 #type-selector {
   color: #fff;
   background-color: #4d90fe;
   padding: 5px 11px 0px 11px;
 }
 
-/* line 48, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 55, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 #type-selector label {
   font-family: Roboto;
   font-size: 13px;
