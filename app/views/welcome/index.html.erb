@@ -1,108 +1,110 @@
-<div class="ui inverted vertical masthead center aligned segment" id="animated-gif-container">
-  <div class="ui text container" id="header-stripe">
-    <h1 class="ui inverted header">Sodata App</h1>
-    <h2>Open Data Crime Analysis to help prevent bike thefts.</h2>
-    <% if !current_user %>
-      <button class="ui large red button">
-        <div class="ui animated fade labeled button ui google plus large button red" tabindex="0">
-          <div class="visible content large button red">
-            Get Started Now
-            <i class="google plus icon"></i>
-          </div>
-          <div class="hidden content">
-            <%= link_to 'Google+', login_path, class: 'large button red' %>
-          </div>
-        </div>
-      </button>
-    <% end %>
-  </div>
-</div>
-
-<div class="ui vertical stripe segment">
-  <div class="ui special cards">
-    <div class="ui three column stackable grid">
-
-      <div class="two wide column"></div>
-      <div class="four wide column">
-
-          <div class="ui fluid card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted red large button">
-                      <%= link_to "See More", seattle_crime_path, class:  "no-link-style"%>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+<% cache('home-page') do %> 
+  <div class="ui inverted vertical masthead center aligned segment" id="animated-gif-container">
+    <div class="ui text container" id="header-stripe">
+      <h1 class="ui inverted header">Sodata App</h1>
+      <h2>Open Data Crime Analysis to help prevent bike thefts.</h2>
+      <% if !current_user %>
+        <button class="ui large red button">
+          <div class="ui animated fade labeled button ui google plus large button red" tabindex="0">
+            <div class="visible content large button red">
+              Get Started Now
+              <i class="google plus icon"></i>
             </div>
-            <div class="content">
-              <%= link_to "Seattle Crime", seattle_crime_path, class: "header" %>
-            </div>
-            <div class="extra content">
-              <p>
-                Incidents are based on initial police reports taken by officers when responding to crimes around the city. This information is published within 6 - 12 hours after the report is filed into the system.
-              </p>
-              <%= link_to "See Crime Map", seattle_crime_path %>
+            <div class="hidden content">
+              <%= link_to 'Google+', login_path, class: 'large button red' %>
             </div>
           </div>
-        </div>
-
-
-        <div class="four wide column">
-          <div class="ui fluid card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted red large button">
-                      <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="no-link-style">Seattle Bike Blog</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
-            </div>
-            <div class="content">
-              <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="header no-link-style">Tips from a Pro</a>
-            </div>
-            <div class="extra content">
-              <p>
-                Seattle Police received 581 stolen bike reports January through May in 2015, according to police report data at data.seattle.gov. This is a problem that can be solved by following these simple tips and practices.
-              </p>
-              <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank">Seattle Bike Blog</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="four wide column">
-          <div class="ui fluid card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted red large button">Manage Account</div>
-                  </div>
-                </div>
-              </div>
-              <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
-            </div>
-            <div class="content">
-              <a class="header">Bike Registration</a>
-            </div>
-            <div class="extra content">
-              <p>
-                Adding a bike and registering it with a Serial number can help recover your bike in the case of theft. It is simple and easy to register and manage your bike(s) with us. Simply click here to get started today.
-              </p>
-              <%= link_to "Continue", seattle_crime_path %>
-            </div>
-          </div>
-        </div>
-
-        </div>
-      <div class="two wide column"></div>
+        </button>
+      <% end %>
     </div>
   </div>
-</div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui special cards">
+      <div class="ui three column stackable grid">
+
+        <div class="two wide column"></div>
+        <div class="four wide column">
+
+            <div class="ui fluid card">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted red large button">
+                        <%= link_to "See More", seattle_crime_path, class:  "no-link-style"%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+              </div>
+              <div class="content">
+                <%= link_to "Seattle Crime", seattle_crime_path, class: "header" %>
+              </div>
+              <div class="extra content">
+                <p>
+                  Incidents are based on initial police reports taken by officers when responding to crimes around the city. This information is published within 6 - 12 hours after the report is filed into the system.
+                </p>
+                <%= link_to "See Crime Map", seattle_crime_path %>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="four wide column">
+            <div class="ui fluid card">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted red large button">
+                        <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="no-link-style">Seattle Bike Blog</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+              </div>
+              <div class="content">
+                <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank" class="header no-link-style">Tips from a Pro</a>
+              </div>
+              <div class="extra content">
+                <p>
+                  Seattle Police received 581 stolen bike reports January through May in 2015, according to police report data at data.seattle.gov. This is a problem that can be solved by following these simple tips and practices.
+                </p>
+                <a href="http://www.seattlebikeblog.com/tag/bike-thefts/" target="_blank">Seattle Bike Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="four wide column">
+            <div class="ui fluid card">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted red large button">Manage Account</div>
+                    </div>
+                  </div>
+                </div>
+                <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
+              </div>
+              <div class="content">
+                <a class="header">Bike Registration</a>
+              </div>
+              <div class="extra content">
+                <p>
+                  Adding a bike and registering it with a Serial number can help recover your bike in the case of theft. It is simple and easy to register and manage your bike(s) with us. Simply click here to get started today.
+                </p>
+                <%= link_to "Continue", seattle_crime_path %>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        <div class="two wide column"></div>
+      </div>
+    </div>
+  </div>
+<% end %>

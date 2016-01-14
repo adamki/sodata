@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#show"
   match 'seattle/crime' => 'seattle#crime', :via => :get
 
+  resources :seattle do
+    get :bike_thefts, on: :collection
+    # or you may prefer to call this route on: :member
+  end
+
 end

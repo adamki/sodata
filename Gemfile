@@ -17,6 +17,8 @@ gem 'foreman'
 gem 'whenever', require: false
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'omniauth-google-oauth2'
+gem 'responders'
+gem 'hurley'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test

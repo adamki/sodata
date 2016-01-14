@@ -1,26 +1,32 @@
 class SocrataService
-  attr_reader :client
+  attr_reader :client, :conn
 
   def initialize
-    @client ||= SODA::Client.new({
-      :domain => "data.seattle.gov", 
-      :app_token => ENV["socrata_app_token"]
-    })
+    @conn = Faraday.new(:url => 'https://data.seattle.gov/resource/i47f-eseg.json') do |faraday|
+      faraday.request  :url_encoded             # form-encode POST params
+      faraday.response :logger                  # log requests to STDOUT
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
   end
 
-  def fetch_crimes
-    client.get("yamw-xkh3", 
-               { "$limit" => 50 })
+  def bike_thefts(lat, lng, dist = 500)
+    response = conn.get "?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})"
+    responses = parse(response)
+    formatter(responses)
   end
 
-  def fetch_thefts
-    client.get("yamw-xkh3", 
-               {"$where"  => "offense_code = '2399'", "$limit" => 20})
+  private
+
+  def parse(response)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
-  def fetch_bike_racks
-    client.get("svqu-nfve", 
-               {"$limit" => 100})
+  def formatter(responses)
+    responses.map do |response|
+      [response[:hundred_block_location],
+       response[:location][:latitude],
+       response[:location][:longitude]]
+    end
   end
 
 end
