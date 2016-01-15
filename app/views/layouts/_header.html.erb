@@ -5,7 +5,9 @@
       <%= link_to user_path(current_user), class: "ui item" do %>
         Welcome, <%= current_user.first_name.titleize %>  <%= current_user.last_name.titleize %>
       <% end %>
-      <%= link_to "Logout", logout_path, class:"ui item"%>
+      <a href="#" id="logout" class="no-link-style ui item">
+        Logout
+      </a>
     <% else %>
       <%= link_to "Login", login_path, class:"ui item"%>
     <% end %>
@@ -28,7 +30,7 @@
     <div class="two fluid ui inverted buttons">
       <div class="ui red basic inverted button">
         <i class="remove icon"></i>
-        No
+        <%= link_to "No", dashboard_path, class:"close icon ui item no-link-style" %>
       </div>
       <div class="ui green basic inverted button">
         <i class="checkmark icon"></i>
