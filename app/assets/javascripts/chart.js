@@ -1,7 +1,6 @@
 var plotMap = function(results){
   $(function () {
     var crimes_and_times = results.crimes_and_times;
-    debugger
     $('#container').highcharts({
       title: {
         text: 'The Best bike Data',

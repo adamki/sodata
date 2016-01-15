@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require semantic-ui
+//= require semantic-ui/modal
 //= require lodash
 //= require highcharts
 //= require highcharts/highcharts-more

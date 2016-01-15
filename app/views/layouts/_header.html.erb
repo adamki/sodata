@@ -11,3 +11,38 @@
     <% end %>
   </div>
 </div>
+
+<div class="ui basic modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Sure you want to Leave?
+  </div>
+  <div class="image content">
+    <div class="image">
+    </div>
+    <div class="description">
+      <p>We are so sad to see you go. Thanks for using Sodata App</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="two fluid ui inverted buttons">
+      <div class="ui red basic inverted button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui green basic inverted button">
+        <i class="checkmark icon"></i>
+        <%= link_to "Yes, I am ready.", logout_path, class:"ui item no-link-style", id: "logout"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#logout").on('click', function(){
+      $('.ui.basic.modal').modal('show');
+    })
+  })
+</script>
