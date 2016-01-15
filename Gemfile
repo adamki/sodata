@@ -19,6 +19,8 @@ gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'omniauth-google-oauth2'
 gem 'responders'
 gem 'hurley'
+gem "highcharts-rails", "~> 3.0.0"
+gem 'lodash-rails'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test

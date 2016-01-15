@@ -1,18 +1,21 @@
+
+
 //////////////////////////////////////////////////////////
-  // INITIALIZE MAP 
+  // INITIALIZE MAP
 //////////////////////////////////////////////////////////
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.612926, lng: -122.336815},
     zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
   });
 
 //////////////////////////////////////////////////////////
   // Create the search box and link it to the UI element.
 //////////////////////////////////////////////////////////
-  
+
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
@@ -32,22 +35,23 @@ function initAutocomplete() {
       return;
     }
 //////////////////////////////////////////////////////////
-  // GEOCODERZZZZZZZZZZZZZ 
+  // GEOCODERZZZZZZZZZZZZZ
 //////////////////////////////////////////////////////////
-    
+
     function socrataData(lat, lng){
       return $.ajax({
         type: "GET",
         url: "/seattle/bike_thefts",
         data: {lat: lat, lng: lng},
         success: function(result){
-          var results = markers.concat(result);
+          results = { markers: markers, crimes_and_times: result };
           addMarkers(results);
-        }, 
+          plotMap(results);
+        },
         error: function(xhr){
-          console.log(xhr.responseText)
+          console.log(xhr.responseText);
         }
-      })
+      });
     }
 
 
@@ -67,7 +71,7 @@ function initAutocomplete() {
           //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
           map.setCenter(results[0].geometry.location);
           var marker = new google.maps.Marker({
-              map: map, 
+              map: map,
               position: results[0].geometry.location
           });
         } else {
@@ -86,9 +90,10 @@ function initAutocomplete() {
 
     // For each place, get the icon, name and location.
     function addMarkers(results){
+      results = results.crimes_and_times.crimes
       for (var k = 0; k < results.length; k++) {
         place = new google.maps.Marker({
-          position: new google.maps.LatLng(results[k][1], results[k][2]),
+          position: new google.maps.LatLng(results[k].latitude, results[k].longitude),
           map: map,
         });
 
@@ -99,7 +104,6 @@ function initAutocomplete() {
           }
         })(place, k));
       }
-      console.log(results.length)
       results =[]
     }
 

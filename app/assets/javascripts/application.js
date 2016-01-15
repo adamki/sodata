@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require semantic-ui
+//= require lodash
+//= require highcharts
+//= require highcharts/highcharts-more
+//= require_map
 //= require_home
+//= require_chart
 //= require_tree .
