@@ -1,7 +1,7 @@
-
 var plotMap = function(results){
   $(function () {
-    var times = results.crimes_and_times.times;
+    var crimes_and_times = results.crimes_and_times;
+    debugger
     $('#container').highcharts({
       title: {
         text: 'The Best bike Data',
@@ -29,7 +29,7 @@ var plotMap = function(results){
         }]
       },
       tooltip: {
-        valueSuffix: '°C'
+        animation: true,
       },
       legend: {
         layout: 'vertical',
@@ -40,31 +40,31 @@ var plotMap = function(results){
       series: [{
         name: 'Crime',
         data: [
-          times["12AM"] || 0 ,
-          times["1AM"] || 0,
-          times["2AM"]|| 0,
-          times["3AM"]|| 0,
-          times["4AM"]|| 0,
-          times["5AM"]|| 0,
-          times["6AM"]|| 0,
-          times["7AM"]|| 0,
-          times["8AM"]|| 0,
-          times["9AM"]|| 0,
-          times["10AM"]|| 0,
-          times["11AM"]|| 0,
-          times["12AM"]|| 0,
-          times["1PM"]|| 0,
-          times["2PM"]|| 0,
-          times["3PM"]|| 0,
-          times["4PM"]|| 0,
-          times["5PM"]|| 0,
-          times["6PM"]|| 0,
-          times["7PM"]|| 0,
-          times["8PM"]|| 0,
-          times["8PM"]|| 0,
-          times["10PM"]|| 0,
-          times["11PM"]|| 0,
-          times["12PM"] || 0
+          crimes_and_times.times["12AM"] || 0,
+          crimes_and_times.times["1AM"]  || 0,
+          crimes_and_times.times["2AM"]  || 0,
+          crimes_and_times.times["3AM"]  || 0,
+          crimes_and_times.times["4AM"]  || 0,
+          crimes_and_times.times["5AM"]  || 0,
+          crimes_and_times.times["6AM"]  || 0,
+          crimes_and_times.times["7AM"]  || 0,
+          crimes_and_times.times["8AM"]  || 0,
+          crimes_and_times.times["9AM"]  || 0,
+          crimes_and_times.times["10AM"] || 0,
+          crimes_and_times.times["11AM"] || 0,
+          crimes_and_times.times["12AM"] || 0,
+          crimes_and_times.times["1PM"]  || 0,
+          crimes_and_times.times["2PM"]  || 0,
+          crimes_and_times.times["3PM"]  || 0,
+          crimes_and_times.times["4PM"]  || 0,
+          crimes_and_times.times["5PM"]  || 0,
+          crimes_and_times.times["6PM"]  || 0,
+          crimes_and_times.times["7PM"]  || 0,
+          crimes_and_times.times["8PM"]  || 0,
+          crimes_and_times.times["8PM"]  || 0,
+          crimes_and_times.times["10PM"] || 0,
+          crimes_and_times.times["11PM"] || 0,
+          crimes_and_times.times["12PM"] || 0
         ]
       }]
     });

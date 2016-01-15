@@ -13,7 +13,6 @@ class SocrataService
     response = conn.get "?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
     raw_responses = parse(response)
     time_formatted_response =  filter_date_reported(raw_responses)
-
     {
       crimes: time_formatted_response,
       times: with_crime_count(time_formatted_response)
@@ -24,6 +23,14 @@ class SocrataService
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def with_crime_count(crimes)
+    crimes.each_with_object({}) do |crime, acc|
+      hour = crime[:date_reported]
+      count = acc.fetch(hour, 0)
+      acc[hour] = count + 1
+    end
   end
 
   def filter_date_reported(response_collection)
@@ -80,13 +87,4 @@ class SocrataService
       end
     end
   end
-
-  def with_crime_count(crimes)
-    crimes.each_with_object({}) do |crime, acc|
-      hour = crime[:date_reported]
-      count = acc.fetch(hour, 0)
-      acc[hour] = count + 1
-    end
-  end
-
 end

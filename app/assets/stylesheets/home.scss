@@ -1,13 +1,10 @@
+.extra-content {
+  max-height: 30px;
+}
 #animated-gif-container {
-  /*
-  background-image:url(http://winnerhun.uw.hu/vigyorpofa.gif);
-  background-repeat:no-repeat;
-  */
-
   background: #000 url(http://i.giphy.com/6ttbVcJin8HK0.gif) no-repeat center center;
   background-size: 100% auto;
 }
-
 .no-link-style{
   text-decoration: none;
   color: inherit;
@@ -16,7 +13,6 @@
      color: inherit;
   }
 }
-
 .masthead.segment {
   min-height: 800px;
   padding: 1em 0em;
