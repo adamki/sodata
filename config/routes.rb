@@ -10,9 +10,8 @@ Rails.application.routes.draw do
 
   resources :seattle do
     get :bike_thefts, on: :collection
-    # or you may prefer to call this route on: :member
   end
-
-  resources :user, only: [:show]
+  
+  resources :users, only: [:show]
 
 end
