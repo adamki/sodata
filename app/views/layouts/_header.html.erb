@@ -2,12 +2,47 @@
   <%= link_to "Sodata App", root_path, class: "item" %>
   <div class="right menu">
     <% if current_user %>
-      <a class="ui item">
+      <a href= "/dashboard" class="ui item">
         Welcome, <%= current_user.first_name.titleize %>  <%= current_user.last_name.titleize %>
       </a>
-      <%= link_to "Logout", logout_path, class:"ui item"%>
+      <a href="#" id="logout" class="ui item no-link-style">Logout</a>
     <% else %>
       <%= link_to "Login", login_path, class:"ui item"%>
     <% end %>
   </div>
 </div>
+
+<div class="ui basic modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Sure you want to Leave?
+  </div>
+  <div class="image content">
+    <div class="image">
+    </div>
+    <div class="description">
+      <p>We are so sad to see you go. Thanks for using Sodata App</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="two fluid ui inverted buttons">
+      <div class="ui red basic inverted button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui green basic inverted button">
+        <i class="checkmark icon"></i>
+        <%= link_to "Yes, I am ready.", logout_path, class:"ui item no-link-style", id: "logout"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#logout").on('click', function(){
+      $('.ui.basic.modal').modal('show');
+    })
+  })
+</script>

@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     # or you may prefer to call this route on: :member
   end
 
+  resources :user, only: [:show]
+
 end
