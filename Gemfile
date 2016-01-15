@@ -21,6 +21,7 @@ gem 'responders'
 gem 'hurley'
 gem "highcharts-rails", "~> 3.0.0"
 gem 'lodash-rails'
+gem 'twilio-ruby', '~> 4.2.1'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
