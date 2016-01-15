@@ -217,6 +217,10 @@ GEM
     tins (1.6.0)
     turbolinks (2.5.3)
       coffee-rails
+    twilio-ruby (4.2.1)
+      builder (>= 2.1.2)
+      jwt (~> 1.0)
+      multi_json (>= 1.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -259,6 +263,7 @@ DEPENDENCIES
   simplecov
   soda-ruby
   turbolinks
+  twilio-ruby (~> 4.2.1)
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   whenever

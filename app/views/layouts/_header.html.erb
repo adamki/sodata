@@ -2,9 +2,9 @@
   <%= link_to "Sodata App", root_path, class: "item" %>
   <div class="right menu">
     <% if current_user %>
-      <a class="ui item">
+      <%= link_to user_path(current_user), class: "ui item" do %>
         Welcome, <%= current_user.first_name.titleize %>  <%= current_user.last_name.titleize %>
-      </a>
+      <% end %>
       <%= link_to "Logout", logout_path, class:"ui item"%>
     <% else %>
       <%= link_to "Login", login_path, class:"ui item"%>
