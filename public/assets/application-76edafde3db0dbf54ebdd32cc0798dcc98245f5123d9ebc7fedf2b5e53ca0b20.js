@@ -69675,7 +69675,7 @@ var renderGraph = function(results){
     var times = results.times;
     $('#container').highcharts({
       title: {
-        text: 'The Best bike Data',
+        text: 'Hourly Bike Thefts',
         x: -20 //center
       },
       subtitle: {
@@ -69691,7 +69691,8 @@ var renderGraph = function(results){
       },
       yAxis: {
         title: {
-          text: 'Number of Crimes'
+          text: 'Number of Crimes',
+          y: 0
         },
         plotLines: [{
           value: 0,
@@ -69866,11 +69867,14 @@ function addCrimesToMap(places, map){
 	} 
 
   for (x in places) {
+    var theftIcon   = '/assets/robbery.png';
     var crimeLatLng = new google.maps.LatLng( places[x].location.latitude, places[x].location.longitude );
     var crimeMarker = new google.maps.Marker({
       map: map,
+      animation: google.maps.Animation.DROP,
       position: crimeLatLng,
-      title: places[x].offense_type
+      title: places[x].offense_type,
+      icon: theftIcon
     });
     bindInfoWindow(crimeMarker, 
                    map, 
@@ -69885,12 +69889,12 @@ function addCrimesToMap(places, map){
 }
 
 function addRacksToMap(racks, map){
-  var goldStar = {
+  var star = {
     path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-    fillColor: 'lightblue',
+    fillColor: 'darkblue',
     fillOpacity: 0.8,
     scale: .05,
-    strokeColor: 'teal',
+    strokeColor: 'limegreen',
     strokeWeight: 1
   };
 
@@ -69899,7 +69903,7 @@ function addRacksToMap(racks, map){
     var rackMarker = new google.maps.Marker({
       map: map,
       position: rackLatLng,
-      icon: goldStar
+      icon: star
     });
     markers.push(rackMarker)
   }

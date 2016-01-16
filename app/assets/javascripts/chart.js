@@ -4,7 +4,7 @@ var renderGraph = function(results){
     var times = results.times;
     $('#container').highcharts({
       title: {
-        text: 'The Best bike Data',
+        text: 'Hourly Bike Thefts',
         x: -20 //center
       },
       subtitle: {
@@ -20,7 +20,8 @@ var renderGraph = function(results){
       },
       yAxis: {
         title: {
-          text: 'Number of Crimes'
+          text: 'Number of Crimes',
+          y: 0
         },
         plotLines: [{
           value: 0,
