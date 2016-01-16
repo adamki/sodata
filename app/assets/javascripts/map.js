@@ -118,7 +118,7 @@ function addCrimesToMap(places, map){
 	};
 
   for(x in places) {
-    var theftIcon   = 'assets/robbery.png';
+    var theftIcon   = '/assets/robbery.png';
     var crimeLatLng = new google.maps.LatLng( places[x].location.latitude, places[x].location.longitude );
     var crimeMarker = new google.maps.Marker({
       map: map,
@@ -144,7 +144,7 @@ function addRacksToMap(racks, map){
     path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
     fillColor: 'darkblue',
     fillOpacity: 0.8,
-    scale: 05,
+    scale: .05,
     strokeColor: 'limegreen',
     strokeWeight: 1
   };
