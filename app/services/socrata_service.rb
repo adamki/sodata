@@ -2,7 +2,7 @@ class SocrataService
   attr_reader :client, :conn
 
   def initialize
-    @conn = Faraday.new(:url => 'https://data.seattle.gov/resource/i47f-eseg.json') do |faraday|
+    @conn = Faraday.new(:url => 'https://data.seattle.gov/') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
@@ -10,12 +10,17 @@ class SocrataService
   end
 
   def bike_thefts(lat, lng, dist = 500)
-    response = conn.get "?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
-    raw_responses = parse(response)
+    theft_response = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
+    rack_response = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
+
+    raw_responses = parse(theft_response)
+    response      = parse(rack_response)
+
     time_formatted_response =  filter_date_reported(raw_responses)
     {
       crimes: time_formatted_response,
-      times: with_crime_count(time_formatted_response)
+      times: with_crime_count(time_formatted_response),
+      racks: response
     }
   end
 
