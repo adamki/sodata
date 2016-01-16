@@ -10,10 +10,9 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
   });
-  var input = /** @type {!HTMLInputElement} */(
-      document.getElementById('pac-input'));
-
+  var input = ( document.getElementById('pac-input'));
   var types = document.getElementById('type-selector');
+
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
@@ -27,7 +26,6 @@ function initMap() {
   });
 
   autocomplete.addListener('place_changed', function() {
-
     geocode(map);
     destroy()
     infowindow.close();
@@ -39,14 +37,13 @@ function initMap() {
     }
 
     // If the place has a geometry, then present it on a map.
-
     if (place.geometry.viewport) {
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(14);  // Why 17? Because it looks good.
+      map.setZoom(14);  
     }
-    marker.setIcon(/** @type {google.maps.Icon} */({
+    marker.setIcon(({
       url: place.icon,
       size: new google.maps.Size(71, 71),
       origin: new google.maps.Point(0, 0),
@@ -73,17 +70,14 @@ function initMap() {
 
 function geocode(map){
   geocoder = new google.maps.Geocoder();
-  ////In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
   var address = document.getElementById("pac-input").value;
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
+
       var lat  = results[0].geometry.location.lat()
       var lng  = results[0].geometry.location.lng()
-      response = getAndPlotCoordinates(lat, lng, map);
 
-      console.log(markers + "from line 35 just after ajax")
-      console.log(markers)
-      deleteMarkers()
+      getAndPlotCoordinates(lat, lng, map);
       } else {
       alert("Try searching for another location." + status);
     }
@@ -91,35 +85,76 @@ function geocode(map){
 }
 
 var getAndPlotCoordinates = function(lat, lng, map){
-  var infowindow =  new google.maps.InfoWindow({
-      content: ''
-  });
-
   return $.ajax({
     type: "GET",
     url: "/seattle/bike_thefts",
     data: {lat: lat, lng: lng},
     success: function(response){
-      places = response.crimes;
-      //addMarkers(results);
-      //plotMap(results);
-      for (crime in places) {
-        tmpLatLng = new google.maps.LatLng( places[crime].location.latitude, places[crime].location.longitude );
 
-        var marker = new google.maps.Marker({
-          map: map,
-          position: tmpLatLng,
-          //title : places[crime].name + "<br>" + places[crime].location
-        });
-        //bindInfoWindow(marker, map, infowindow, '<b>'+places[p].name + "</b><br>" + places[p].geo_name);
-        // not currently used but good to keep track of markers
-        markers.push(marker)
-      }
+      renderGraph(response);
+
+      var crimes = response.crimes;
+      var racks  = response.racks;
+
+      addCrimesToMap(crimes, map);
+      addRacksToMap(racks, map);
     },
     error: function(xhr){
       console.log(xhr.responseText);
     }
   });
+}
+
+function addCrimesToMap(places, map){
+  var infowindow =  new google.maps.InfoWindow({
+    content: ''
+	});
+
+	var bindInfoWindow = function(crimeMarker, map, infowindow, html) {
+    google.maps.event.addListener(crimeMarker, 'click', function() {
+      infowindow.setContent(html);
+      infowindow.open(map, crimeMarker);
+    });
+	} 
+
+  for (x in places) {
+    var crimeLatLng = new google.maps.LatLng( places[x].location.latitude, places[x].location.longitude );
+    var crimeMarker = new google.maps.Marker({
+      map: map,
+      position: crimeLatLng,
+      title: places[x].offense_type
+    });
+    bindInfoWindow(crimeMarker, 
+                   map, 
+                   infowindow, 
+                   "<b>"+ places[x].date_reported + 
+                   "</b><br>" + places[x].offense_type + 
+                   "</b><br>" + places[x].hundred_block_location + 
+                   "</b><br>" + places[x].date_reported + "</b>");
+    markers.push(crimeMarker)
+  }
+
+}
+
+function addRacksToMap(racks, map){
+  var goldStar = {
+    path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+    fillColor: 'lightblue',
+    fillOpacity: 0.8,
+    scale: .05,
+    strokeColor: 'teal',
+    strokeWeight: 1
+  };
+
+  for(rack in racks){
+    var rackLatLng = new google.maps.LatLng(racks[rack].latitude, racks[rack].longitude);
+    var rackMarker = new google.maps.Marker({
+      map: map,
+      position: rackLatLng,
+      icon: goldStar
+    });
+    markers.push(rackMarker)
+  }
 }
 
 function destroy(){
