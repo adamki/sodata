@@ -1,7 +1,7 @@
 require 'rubygems' # not necessary with ruby 1.9 but included for completeness
 require 'twilio-ruby'
 
-class Twilio
+class TwilioService
   attr_reader :client
 
   def initialize
