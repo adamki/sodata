@@ -118,14 +118,12 @@ function addCrimesToMap(places, map){
 	};
 
   for(x in places) {
-    var theftIcon   = '/assets/robbery.png';
     var crimeLatLng = new google.maps.LatLng( places[x].location.latitude, places[x].location.longitude );
     var crimeMarker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
       position: crimeLatLng,
       title: places[x].offense_type,
-      icon: theftIcon
     });
     bindInfoWindow(crimeMarker,
                    map,
