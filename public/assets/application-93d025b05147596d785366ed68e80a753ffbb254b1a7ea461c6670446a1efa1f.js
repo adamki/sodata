@@ -69776,7 +69776,7 @@ function initMap() {
 
   autocomplete.addListener('place_changed', function() {
     geocode(map);
-    destroy()
+    destroy();
     infowindow.close();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
@@ -69790,7 +69790,7 @@ function initMap() {
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(14);  
+      map.setZoom(14);
     }
     marker.setIcon(({
       url: place.icon,
@@ -69823,8 +69823,8 @@ function geocode(map){
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
 
-      var lat  = results[0].geometry.location.lat()
-      var lng  = results[0].geometry.location.lng()
+      var lat  = results[0].geometry.location.lat();
+      var lng  = results[0].geometry.location.lng();
 
       getAndPlotCoordinates(lat, lng, map);
       } else {
@@ -69852,7 +69852,7 @@ var getAndPlotCoordinates = function(lat, lng, map){
       console.log(xhr.responseText);
     }
   });
-}
+};
 
 function addCrimesToMap(places, map){
   var infowindow =  new google.maps.InfoWindow({
@@ -69864,10 +69864,10 @@ function addCrimesToMap(places, map){
       infowindow.setContent(html);
       infowindow.open(map, crimeMarker);
     });
-	} 
+	};
 
-  for (x in places) {
-    var theftIcon   = '/assets/robbery.png';
+  for(x in places) {
+    var theftIcon   = 'assets/robbery.png';
     var crimeLatLng = new google.maps.LatLng( places[x].location.latitude, places[x].location.longitude );
     var crimeMarker = new google.maps.Marker({
       map: map,
@@ -69876,14 +69876,14 @@ function addCrimesToMap(places, map){
       title: places[x].offense_type,
       icon: theftIcon
     });
-    bindInfoWindow(crimeMarker, 
-                   map, 
-                   infowindow, 
-                   "<b>"+ places[x].date_reported + 
-                   "</b><br>" + places[x].offense_type + 
-                   "</b><br>" + places[x].hundred_block_location + 
+    bindInfoWindow(crimeMarker,
+                   map,
+                   infowindow,
+                   "<b>"+ places[x].date_reported +
+                   "</b><br>" + places[x].offense_type +
+                   "</b><br>" + places[x].hundred_block_location +
                    "</b><br>" + places[x].date_reported + "</b>");
-    markers.push(crimeMarker)
+    markers.push(crimeMarker);
   }
 
 }
@@ -69893,7 +69893,7 @@ function addRacksToMap(racks, map){
     path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
     fillColor: 'darkblue',
     fillOpacity: 0.8,
-    scale: .05,
+    scale: 05,
     strokeColor: 'limegreen',
     strokeWeight: 1
   };
@@ -69905,7 +69905,7 @@ function addRacksToMap(racks, map){
       position: rackLatLng,
       icon: star
     });
-    markers.push(rackMarker)
+    markers.push(rackMarker);
   }
 }
 
