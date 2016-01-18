@@ -2,7 +2,6 @@ class Bike < ActiveRecord::Base
   belongs_to :user
 
   def self.create(params, user)
-    binding.pry
     Bike.create!(
       make:          params[:make],
       model:         params[:model],
