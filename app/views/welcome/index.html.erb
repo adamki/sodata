@@ -84,20 +84,22 @@
                 <div class="ui dimmer">
                   <div class="content">
                     <div class="center">
-                      <div class="ui inverted red large button">Manage Account</div>
+                      <div class="ui inverted red large button">
+                        <%= link_to "See More", dashboard_path, class:  "no-link-style"%>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <%= image_tag "image1.jpg" , class: "city-thumbnail"%>
               </div>
               <div class="content">
-                <a class="header">Bike Registration</a>
+                <a href="/dashboard" class="header">Bike Registration</a>
               </div>
               <div class="extra content">
                 <p>
                   Adding a bike and registering it with a Serial number can help recover your bike in the case of theft. It is simple and easy to register and manage your bike(s) with us. Simply click here to get started today.
                 </p>
-                <%= link_to "Continue", seattle_crime_path %>
+                <%= link_to "Continue", dashboard_path %>
               </div>
             </div>
           </div>

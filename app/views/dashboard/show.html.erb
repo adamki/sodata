@@ -1,9 +1,10 @@
 <div class="row inverted" style="height: 150px"></div>
-<div class="ui grid container">
+<div class="ui two column doubling stackable grid container">
+<% cache 'user' do %>
   <div class="eight wide column">
     <%= render partial: 'layouts/user_card' %>
   </div>
-
+<% end %>
   <div class="eight wide column">
     <%= render partial: 'layouts/bike_section' %>
   </div>
