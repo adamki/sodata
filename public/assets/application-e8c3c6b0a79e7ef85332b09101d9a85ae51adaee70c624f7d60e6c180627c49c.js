@@ -69742,11 +69742,37 @@ var renderGraph = function(results){
     });
   });
 };
+// hover the user card and bike card respectivley
+$(document).ready(function(){
+  allowHover();
+  setupModal();
+})
+
+function allowHover(){
+  $( ".eight" ).hover(
+    function() {
+      $( this ).addClass( "hover" );
+    }, function() {
+      $( this ).removeClass( "hover" );
+    }
+  );
+}
+
+function setupModal(){
+  $("#modal-trigger").on("click", function(){
+    $('.ui.modal.new-bike')
+      .modal('show')
+    ;
+  })
+}
+
+;
 $(document).ready(function(){
   $('.special.cards .image').dimmer({
     on: 'hover'
   });
 });
+
 var geocoder;
 var map;
 var places;
@@ -69933,7 +69959,10 @@ function destroy(){
 
 
 
-//= require_map
 //= require_home
+//= require_dashboard
 //= require_chart
+//= require_map
+
+
 

@@ -17,7 +17,7 @@ class SocrataService
     response      = parse(rack_response)
 
     time_formatted_response =  filter_date_reported(raw_responses)
-    {
+    test =  {
       crimes: time_formatted_response,
       times: with_crime_count(time_formatted_response),
       racks: response

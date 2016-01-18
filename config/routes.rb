@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :seattle do
     get :bike_thefts, on: :collection
   end
-  
-  resources :users, only: [:show]
+
+  resources :bikes, only: [:create]
 
 end

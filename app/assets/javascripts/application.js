@@ -18,7 +18,10 @@
 //= require lodash
 //= require highcharts
 //= require highcharts/highcharts-more
-//= require_map
 //= require_home
+//= require_dashboard
 //= require_chart
+//= require_map
 //= require_tree .
+
+

@@ -1,6 +1,7 @@
 @import "semantic-ui";
 @import "home";
 @import "map";
+@import "dashboard";
 
 // removes shitty padding on bottom of header
 .ui.secondary.pointing.menu {
@@ -10,3 +11,7 @@
 // set height for viewport
 html,body { height: 100%; margin: 0px; padding: 0px; }
 
+.hover{
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4)
+}

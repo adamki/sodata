@@ -1,4 +1,12 @@
-<div class="ui container">
-  <h1>Welcome, <%= current_user.first_name %> <%= current_user.last_name%></h1>
+<div class="row inverted" style="height: 150px"></div>
+<div class="ui grid container">
+  <div class="eight wide column">
+    <%= render partial: 'layouts/user_card' %>
+  </div>
+
+  <div class="eight wide column">
+    <%= render partial: 'layouts/bike_section' %>
+  </div>
 </div>
 
+<div class="row inverted" style="height: 150px"></div>
