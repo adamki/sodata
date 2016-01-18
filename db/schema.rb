@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118020730) do
+ActiveRecord::Schema.define(version: 20160118222617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160118020730) do
     t.datetime "updated_at",         null: false
     t.string   "raw_image"
     t.string   "phone_number"
+    t.boolean  "gets_alert"
   end
 
   add_foreign_key "bikes", "users"
