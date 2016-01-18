@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     get :bike_thefts, on: :collection
   end
 
-  resources :bikes, only: [:create]
+  resources :bikes
 
 end

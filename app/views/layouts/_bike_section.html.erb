@@ -11,18 +11,42 @@
   <% @bikes.each do |bike| %>
     </br>
     </br>
+
+    <div class="ui small basic icon buttons right aligned">
+      <%= link_to "Delete?", bike, class: "ui button", method: :delete, data: {confirm: "You sure?"}%>
+    </div>
+
     <div class="ui list">
-      <div class="item">
-        <% if bike.terrain == "Road" %>
-          <i class="road icon" id="large-icon"></i>
-        <% else %>
-          <i class="tree marker icon" id="large-icon"></i>
-        <% end %>
-        <div class="content">
-          <a class="header"><%= bike.make %> <%= bike.model %></a>
-          <a class="header"><%= bike.description %></a>
-          <a class="header"><%= bike.serial_number %></a>
-          <a class="header"><%= bike.terrain %></a>
+      <div class="item center aligned">
+        <h2 class="ui center aligned icon header">
+          <% if bike.terrain == "Road" %>
+            <i class="circular road icon bike" id="large-icon"></i>
+          <% else %>
+            <i class="circular tree marker icon bike" id="large-icon"></i>
+          <% end %>
+          <%= bike.model %> <%= bike.make %>
+        </h2>
+        <div class="content center aligned">
+          <h2 class="ui sub header">
+            Description:
+          </h2>
+          <span>
+            <%= bike.description %>
+          </span>
+
+          <h2 class="ui sub header">
+            Serial Number:
+          </h2>
+          <span>
+            <%= bike.serial_number %>
+          </span>
+
+          <h2 class="ui sub header">
+            Type:
+          </h2>
+          <span>
+            <%= bike.terrain %>
+          </span>
         </div>
       </div>
     </div>
@@ -87,3 +111,4 @@
   </br>
   </br>
 </div>
+
