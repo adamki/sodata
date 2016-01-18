@@ -38,44 +38,44 @@
     </div>
   </div>
   </br>
-  </br>
 
-  <form class="user ui form">
+  <%= form_tag user_path(current_user), method: :put, :class => "user ui form" do %>
     <div class="field">
       <label>First Name</label>
-      <input type="text" name="first-name" placeholder=<%= current_user.first_name %>>
+      <%= text_field_tag "first-name", nil, placeholder: current_user.first_name  %>
     </div>
+
     <div class="field">
       <label>Last Name</label>
-      <input type="text" name="last-name" placeholder=<%= current_user.last_name %>>
+      <%= text_field_tag "last-name", nil, placeholder: current_user.last_name  %>
     </div>
+
     <div class="field">
       <label>Phone Number</label>
-      <input type="text" name="last-name" placeholder=<%= current_user.phone_number %>>
+      <%= text_field_tag "phone", nil, placeholder: current_user.phone_number  %>
     </div>
+
     <div class="field">
       <label>Gender</label>
-      <input type="text" name="last-name" placeholder=<%= current_user.gender %>>
+      <%= text_field_tag "gender", nil, placeholder: current_user.gender  %>
     </div>
+
     <div class="field">
       <label>Email</label>
-      <input type="text" name="last-name" placeholder=<%= current_user.email %>>
+      <%= text_field_tag "email", nil, placeholder: current_user.email  %>
     </div>
+
     <div class="ui toggle checkbox">
-      <input type="checkbox" name="public">
+      <%= check_box_tag 'accept' %>
       <label>Get Notifications for Missing Bikes?</label>
     </div>
+
     </br>
     </br>
-    <div class="ui buttons">
-      <button class="ui button">
-        <i class="remove circle icon"></i>
-      </button>
-      <div class="or"></div>
-      <button class="ui positive button">
-        <i class="checkmark icon"></i>
-      </button>
-    </div>
-  </form>
+
+    <%= submit_tag "Everything Look OK?", class: "ui positive button" do %>
+      <i class="checkmark icon"></i>
+    <% end %>
+  <% end %>
 
 </div>
