@@ -10,7 +10,6 @@ class SocrataService
   end
 
   def bike_thefts(lat, lng, dist = 500)
-    binding.pry
     theft_response = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
     rack_response = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
 

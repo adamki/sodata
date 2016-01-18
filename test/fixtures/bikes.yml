@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  serial_number: MyString
+  description: MyString
+  user_id: 
+
+two:
+  make: MyString
+  model: MyString
+  serial_number: MyString
+  description: MyString
+  user_id: 
