@@ -10,6 +10,7 @@ class SocrataService
   end
 
   def bike_thefts(lat, lng, dist = 500)
+    binding.pry
     theft_response = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
     rack_response = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
 
@@ -17,7 +18,7 @@ class SocrataService
     response      = parse(rack_response)
 
     time_formatted_response =  filter_date_reported(raw_responses)
-    {
+    test =  {
       crimes: time_formatted_response,
       times: with_crime_count(time_formatted_response),
       racks: response

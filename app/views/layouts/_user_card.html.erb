@@ -1,0 +1,79 @@
+<div class="ui segment red" id="dashboard-card">
+  <h2 class="ui center floated header blue">
+    <%= current_user.first_name %> <%= current_user.last_name%>'s Profile
+  </h2>
+
+  </br>
+  <h4 class="ui horizontal divider header">
+    <i class="user icon"></i>
+    Account Details
+  </h4>
+
+  <div class="ui divided items"> </br>
+    <div class="image left floated right aligned">
+      <a href="#" class="ui tiny image circular">
+        <img src="<%= image_url current_user.raw_image %>" class="ui tiny image">
+      </a>
+
+      <div class="ui list right floated left aligned">
+        <div class="item">
+          <i class="users icon"></i>
+          <div class="content">
+            Sodata App
+          </div>
+        </div>
+        <div class="item">
+          <i class="marker icon"></i>
+          <div class="content">
+            Seattle, WA
+          </div>
+        </div>
+        <div class="item">
+          <i class="mail icon"></i>
+          <div class="content">
+            <a href="<%= current_user.email%>"><%= current_user.email %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </br>
+  </br>
+  <form class="ui form">
+    <div class="field">
+      <label>First Name</label>
+      <input type="text" name="first-name" placeholder=<%= current_user.first_name %>>
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input type="text" name="last-name" placeholder=<%= current_user.last_name %>>
+    </div>
+    <div class="field">
+      <label>Phone Number</label>
+      <input type="text" name="last-name" placeholder=<%= current_user.phone_number %>>
+    </div>
+    <div class="field">
+      <label>Gender</label>
+      <input type="text" name="last-name" placeholder=<%= current_user.gender %>>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="text" name="last-name" placeholder=<%= current_user.email %>>
+    </div>
+    <div class="ui toggle checkbox">
+      <input type="checkbox" name="public">
+      <label>Get Notifications for Missing Bikes?</label>
+    </div>
+    </br>
+    </br>
+    <div class="ui buttons">
+      <button class="ui button">
+        <i class="remove circle icon"></i>
+      </button>
+      <div class="or"></div>
+      <button class="ui positive button">
+        <i class="checkmark icon"></i>
+      </button>
+    </div>
+  </form>
+</div>
