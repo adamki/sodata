@@ -11,7 +11,7 @@ class TwilioService
   def build_sms(message)
     users = User.all
     users.each do |user|
-      send_sms(user.phone_number, message) if user.phone_number
+      send_sms(user.phone_number, message) if user.gets_alert
     end
   end
 

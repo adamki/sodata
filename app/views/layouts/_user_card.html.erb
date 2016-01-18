@@ -17,21 +17,27 @@
 
       <div class="ui list right floated left aligned">
         <div class="item">
-          <i class="users icon"></i>
+          <i class="volume up icon"></i>
           <div class="content">
-            Sodata App
+            <%= current_user.gets_alert %>
           </div>
         </div>
         <div class="item">
           <i class="marker icon"></i>
           <div class="content">
-            Seattle, WA
+            Denver, CO
           </div>
         </div>
         <div class="item">
-          <i class="mail icon"></i>
+          <i class="mail outline icon"></i>
           <div class="content">
-            <a href="<%= current_user.email%>"><%= current_user.email %></a>
+             <%= current_user.email %>
+          </div>
+        </div>
+        <div class="item">
+          <i class="phone icon"></i>
+          <div class="content">
+            <%= current_user.phone_number %>
           </div>
         </div>
       </div>
@@ -42,33 +48,43 @@
   <%= form_tag user_path(current_user), method: :put, :class => "user ui form" do %>
     <div class="field">
       <label>First Name</label>
-      <%= text_field_tag "first-name", nil, placeholder: current_user.first_name  %>
+      <%= text_field_tag "first_name", current_user.first_name  %>
     </div>
 
     <div class="field">
       <label>Last Name</label>
-      <%= text_field_tag "last-name", nil, placeholder: current_user.last_name  %>
+      <%= text_field_tag "last_name",  current_user.last_name  %>
     </div>
 
     <div class="field">
       <label>Phone Number</label>
-      <%= text_field_tag "phone", nil, placeholder: current_user.phone_number  %>
+      <%= text_field_tag "phone_number", current_user.phone_number %>
     </div>
 
     <div class="field">
       <label>Gender</label>
-      <%= text_field_tag "gender", nil, placeholder: current_user.gender  %>
+      <%= text_field_tag "gender", current_user.gender  %>
     </div>
 
     <div class="field">
       <label>Email</label>
-      <%= text_field_tag "email", nil, placeholder: current_user.email  %>
+      <%= text_field_tag "email", current_user.email  %>
     </div>
 
-    <div class="ui toggle checkbox">
-      <%= check_box_tag 'accept' %>
-      <label>Get Notifications for Missing Bikes?</label>
-    </div>
+    <label>Get Notifications for Missing Bikes?</label>
+    </br>
+    <% if current_user.phone_number == nil || current_user.phone_number == ""%>
+      <div class="ui toggle checkbox disabled field">
+        <%= check_box_tag 'accept', disabled: true %>
+        <label>Please Add A Phone Number First</label>
+      </div>
+    <% else %>
+      <div class="ui toggle checkbox">
+        <%= hidden_field_tag :gets_alert, false %>
+        <%= check_box_tag :gets_alert, checked = true %>
+        <label></label>
+      </div>
+    <% end %>
 
     </br>
     </br>
