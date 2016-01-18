@@ -8,9 +8,18 @@ class TwilioService
     @client = Twilio::REST::Client.new ENV["account_sid"], ENV["auth_token"]
   end
 
-  def self.outgoing_sms(recipient, message)
+  def build_sms(message)
+    users = User.all
+    users.each do |user|
+      send_sms(user.phone_number, message) if user.phone_number
+    end
+  end
+
+  private
+
+  def send_sms(recipient = "+17758159995", message)
     client.messages.create(from: '+17752009368', 
-                           to: '', 
-                           body: '')
+                           to: recipient, 
+                           body: message)
   end
 end

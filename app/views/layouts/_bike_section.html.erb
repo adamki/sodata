@@ -13,7 +13,19 @@
     </br>
 
     <div class="ui small basic icon buttons right aligned">
-      <%= link_to "Delete?", bike, class: "ui button", method: :delete, data: {confirm: "You sure?"}%>
+      <%= link_to "Delete?", 
+        bike, 
+        class: "ui button", 
+        method: :delete, 
+        data: {confirm: "You sure?"}%>
+    </div>
+
+    <div class="ui small basic icon buttons right aligned">
+      <%= link_to "Missing?", 
+        missing_bike_path(bike), 
+        class: "ui button", 
+        method: :post, 
+        data: {confirm: "Please Confirm?"}%>
     </div>
 
     <div class="ui list">

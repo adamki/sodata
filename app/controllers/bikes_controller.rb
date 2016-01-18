@@ -5,10 +5,23 @@ class BikesController < ApplicationController
     redirect_to :back
   end
 
+  def missing
+    bike = Bike.find(bike_params[:id])
+    message = build_message(bike)
+    TwilioService.new.build_sms(message)
+    redirect_to :back
+  end
+
   def destroy 
     bike = Bike.find(bike_params[:id])
     bike.delete
     redirect_to dashboard_path
+  end
+
+  private
+
+  def build_message(bike)
+    "Please be on the lookout for a '#{bike.model} #{bike.make}', serial number #{bike.serial_number} that was stolen on #{Time.now}"
   end
 
   def bike_params
