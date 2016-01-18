@@ -37770,45 +37770,46 @@ html.ios body {
          Site Overrides
 *******************************/
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
-.extra-content {
-  max-height: 30px;
+.extra.content {
+  height: 150px;
+  overflow: scroll;
 }
 
-/* line 6, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 7, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 #animated-gif-container {
   background: #000 url(http://i.giphy.com/6ttbVcJin8HK0.gif) no-repeat center center;
   background-size: 100% auto;
 }
 
-/* line 11, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 12, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .no-link-style {
   text-decoration: none;
   color: inherit;
 }
-/* line 14, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 15, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .no-link-style:hover {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 19, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 20, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .masthead.segment {
   min-height: 800px;
   padding: 1em 0em;
   background-color: lightgrey;
 }
 
-/* line 24, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 25, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .masthead .logo.item img {
   margin-right: 1em;
 }
 
-/* line 27, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 28, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .masthead .ui.menu .ui.button {
   margin-left: 0.5em;
 }
 
-/* line 30, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 31, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .masthead h1.ui.header {
   margin-top: 3em;
   margin-bottom: 0em;
@@ -37816,98 +37817,98 @@ html.ios body {
   font-weight: lighter;
 }
 
-/* line 36, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 37, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .masthead h2 {
   font-size: 1.7em;
   font-weight: lighter;
 }
 
-/* line 40, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 41, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe {
   padding: 8em 0em;
 }
 
-/* line 43, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 44, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe h3 {
   font-size: 2em;
 }
 
-/* line 46, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 47, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
   margin-top: 3em;
 }
 
-/* line 50, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 51, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 a.large.button {
   color: white;
 }
 
-/* line 53, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 54, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe .floated.image {
   clear: both;
 }
 
-/* line 56, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 57, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe p {
   font-size: 1.33em;
 }
 
-/* line 59, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 60, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .ui.vertical.stripe .horizontal.divider {
   margin: 3em 0em;
 }
 
-/* line 62, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 63, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .quote.stripe.segment {
   padding: 0em;
 }
 
-/* line 65, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 66, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .quote.stripe.segment .grid .column {
   padding-top: 5em;
   padding-bottom: 5em;
 }
 
-/* line 69, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 70, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .footer.segment {
   padding: 5em 0em;
 }
 
-/* line 72, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+/* line 73, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
 .secondary.pointing.menu .toc.item {
   display: none;
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 77, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 78, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .ui.fixed.menu {
     display: none !important;
   }
 
-  /* line 80, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 81, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .secondary.pointing.menu .item,
   .secondary.pointing.menu .menu {
     display: none;
   }
 
-  /* line 84, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 85, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .secondary.pointing.menu .toc.item {
     display: block;
   }
 
-  /* line 87, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 88, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .masthead.segment {
     min-height: 350px;
   }
 
-  /* line 90, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 91, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .masthead h1.ui.header {
     font-size: 2em;
     margin-top: 1.5em;
   }
 
-  /* line 94, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
+  /* line 95, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/home.scss */
   .masthead h2 {
     margin-top: 0.5em;
     font-size: 1.5em;
