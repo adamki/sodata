@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def show
-    @bikes = current_user.bikes
     redirect_to root_path if !current_user
+    @bikes = current_user.bikes
   end
 end

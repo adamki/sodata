@@ -26,3 +26,12 @@ production:
   socrata_secret_token: EKMNsmmj285VnDA6JVndc0s3IIoVN4_eyO_M
   account_sid: AC9845dbc5be3683da7a04141c96d92056
   auth_token: b0ff9759dc48805a92ccc81c0169b922
+
+test:
+  google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
+  google_client_secret: FMLI5i7zc2XSv-LVLIkytpBQ
+  socrata_app_token: qTiLdwifqI81HjFYUfMJm1CPL
+  socrata_secret_token: EKMNsmmj285VnDA6JVndc0s3IIoVN4_eyO_M
+  account_sid: AC9845dbc5be3683da7a04141c96d92056
+  auth_token: b0ff9759dc48805a92ccc81c0169b922
+  test_token: ya29.bgJnotjzfngkgaf6EvtGI_IWOFr1tUkv2ZWos6zIjAZ_ARac9REM0K_nUjtJAU6KlXxWRw

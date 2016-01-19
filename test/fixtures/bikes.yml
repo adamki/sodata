@@ -5,11 +5,11 @@ one:
   model: MyString
   serial_number: MyString
   description: MyString
-  user_id: 
+  user_id: one
 
 two:
   make: MyString
   model: MyString
   serial_number: MyString
   description: MyString
-  user_id: 
+  user_id: one
