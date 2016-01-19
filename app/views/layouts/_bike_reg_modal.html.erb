@@ -1,0 +1,53 @@
+<div class="ui modal new-bike" id="bike-reg-modal">
+  <i class="close icon"></i>
+  <div class="ui grid">
+
+    <div class="four wide column">
+      <div class="image content">
+        <div class="ui medium image">
+          <img src="/assets/fg.png">
+        </div>
+        <div class="description">
+          <div class="ui header">Simply Fill out the basic information</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ten wide column">
+      <%= form_tag bikes_path, method: :create, :class => "user ui form" do %>
+        <%= hidden_field_tag "user_id", current_user.id %>
+
+        <div class="field">
+          <label>Model</label>
+          <%= text_field_tag "model" %>
+        </div>
+
+        <div class="field">
+          <label>Make</label>
+          <%= text_field_tag "make" %>
+        </div>
+
+        <div class="field">
+          <label>Description</label>
+          <%= text_field_tag "description" %>
+        </div>
+
+        <div class="field">
+          <label>Serial Number</label>
+          <%= text_field_tag "serial_number" %>
+        </div>
+
+        <div class="field">
+          <label>Terrain</label>
+          <%= select_tag :terrain, options_for_select([ "Road", "Mountain" ], "Road")%>
+        </div>
+
+        <%= submit_tag "Everything Look OK?", class: "ui positive right labeled icon button" do %>
+          <i class="checkmark icon"></i>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#show"
   match 'seattle/crime' => 'seattle#crime', :via => :get
 
-  resources :users, only: [:update, :delete]
+  resources :users, only: [:update, :destroy]
 
   resources :seattle do
     get :bike_thefts, on: :collection
