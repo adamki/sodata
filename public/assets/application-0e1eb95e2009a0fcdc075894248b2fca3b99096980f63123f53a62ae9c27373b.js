@@ -69674,8 +69674,11 @@ var renderGraph = function(results){
   $(function () {
     var times = results.times;
     $('#container').highcharts({
+      chart:{
+        type: "column"
+      },
       title: {
-        text: 'Hourly Bike Thefts',
+        text: 'Bike Thefts By Hour',
         x: -20 //center
       },
       subtitle: {
@@ -69691,7 +69694,7 @@ var renderGraph = function(results){
       },
       yAxis: {
         title: {
-          text: 'Number of Crimes',
+          text: 'Number Of Crimes',
           y: 0
         },
         plotLines: [{
@@ -69923,19 +69926,25 @@ function addCrimesToMap(places, map){
       position: crimeLatLng,
       title: places[x].offense_type,
     });
+    debugger
     bindInfoWindow(crimeMarker,
                    map,
                    infowindow,
-                   "<b>"+ places[x].date_reported +
-                   "</b><br>" + places[x].offense_type +
-                   "</b><br>" + places[x].hundred_block_location +
-                   "</b><br>" + places[x].date_reported + "</b>");
+                   "<b>Time of Crime:</b> "+ places[x].date_reported + "<br>"
+                   + "<b>Date:</b> " + places[x].occurred_date_or_date_range_start + "</br>"
+                   + "<b>Type of Offense:</b> " + places[x].offense_type + "<br>"
+                   + "<b>General Location:</b> " + places[x].hundred_block_location + "<br>"
+                   + "<b>ZONE/BEAT</b> " + places[x].zone_beat + "<br>");
     markers.push(crimeMarker);
   }
 
 }
 
 function addRacksToMap(racks, map){
+  var infowindow =  new google.maps.InfoWindow({
+    content: ''
+	});
+
   var star = {
     path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
     fillColor: 'darkblue',
@@ -69945,6 +69954,13 @@ function addRacksToMap(racks, map){
     strokeWeight: 1
   };
 
+	var bindInfoWindow = function(rackMarker, map, infowindow, html) {
+    google.maps.event.addListener(rackMarker, 'click', function() {
+      infowindow.setContent(html);
+      infowindow.open(map, rackMarker);
+    });
+	};
+
   for(rack in racks){
     var rackLatLng = new google.maps.LatLng(racks[rack].latitude, racks[rack].longitude);
     var rackMarker = new google.maps.Marker({
@@ -69952,6 +69968,16 @@ function addRacksToMap(racks, map){
       position: rackLatLng,
       icon: star
     });
+
+    bindInfoWindow(rackMarker,
+                   map,
+                   infowindow,
+                    "<b> Rack Width:</b> " + racks[x].width + "<br>" 
+                   +"<b> Rack Type:</b> " + racks[x].finish_typ + "<br>"
+                   +"<b> Rack Manufacturer:</b> " + racks[x].manufactur + "<br>"
+                   +"<b> Rack Condition:</b> " + racks[x].asset_cond + "<br>"
+                   +"<b> Rack Location:</b> " + racks[x].unitdesc + "<br>"
+                   +"<b> Rack Capacity:</b> " + racks[x].rack_capac + "</b>");
     markers.push(rackMarker);
   }
 }
