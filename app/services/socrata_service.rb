@@ -3,24 +3,17 @@ class SocrataService
 
   def initialize
     @conn = Faraday.new(:url => 'https://data.seattle.gov/') do |faraday|
-      faraday.request  :url_encoded             # form-encode POST params
-      faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+      faraday.request  :url_encoded            
+      faraday.response :logger                 
+      faraday.adapter  Faraday.default_adapter 
     end
   end
 
-  def bike_thefts(lat, lng, dist = 500)
-    theft_response = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
-    rack_response = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
-
-    raw_responses = parse(theft_response)
-    response      = parse(rack_response)
-
-    time_formatted_response =  filter_date_reported(raw_responses)
-    test =  {
-      crimes: time_formatted_response,
-      times: with_crime_count(time_formatted_response),
-      racks: response
+  def build_crimes(lat, lng)
+    {
+      crimes: get_thefts(lat, lng),
+      times: with_crime_count(get_thefts(lat, lng)),
+      racks: get_racks(lat, lng)
     }
   end
 
@@ -28,6 +21,17 @@ class SocrataService
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_thefts(lat, lng, dist = 500)
+    thefts = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
+    response = parse(thefts)
+    filter_date_reported(response)
+  end
+
+  def get_racks(lat, lng, dist = 700)
+    racks = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
+    parse(racks)
   end
 
   def with_crime_count(crimes)

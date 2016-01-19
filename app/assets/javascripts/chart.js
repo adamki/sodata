@@ -3,8 +3,11 @@ var renderGraph = function(results){
   $(function () {
     var times = results.times;
     $('#container').highcharts({
+      chart:{
+        type: "column"
+      },
       title: {
-        text: 'Hourly Bike Thefts',
+        text: 'Bike Thefts By Hour',
         x: -20 //center
       },
       subtitle: {
@@ -20,7 +23,7 @@ var renderGraph = function(results){
       },
       yAxis: {
         title: {
-          text: 'Number of Crimes',
+          text: 'Number Of Crimes',
           y: 0
         },
         plotLines: [{
