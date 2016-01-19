@@ -8,7 +8,7 @@ class TwilioService
     @client = Twilio::REST::Client.new ENV["account_sid"], ENV["auth_token"]
   end
 
-  def build_sms(message)
+  def build_sms(message = "stub")
     users = User.all
     users.each do |user|
       send_sms(user.phone_number, message) if user.gets_alert

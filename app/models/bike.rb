@@ -1,4 +1,10 @@
 class Bike < ActiveRecord::Base
+  validates :make, 
+            :model, 
+            :serial_number,
+            :description,
+            :terrain, presence: true
+
   belongs_to :user
 
   def self.create(params, user)

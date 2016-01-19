@@ -19,7 +19,11 @@
         <div class="item">
           <i class="volume up icon"></i>
           <div class="content">
-            <%= current_user.gets_alert %>
+            <% if current_user.gets_alert %>
+              True
+            <% else%>
+              False
+            <% end %>
           </div>
         </div>
         <div class="item">
@@ -89,15 +93,14 @@
     </br>
     </br>
 
-    <%= submit_tag "Everything Look OK?", class: "ui positive button" do %>
+    <%= submit_tag "Update Account", class: "ui positive button blue" do %>
       <i class="checkmark icon"></i>
     <% end %>
     <div class="ui small red basic icon buttons right aligned">
       <%= link_to "Delete Account", 
         current_user, 
         class: "ui button", 
-        method: :delete, 
-        data: {confirm: "You sure?"}%>
+        method: :delete %>
     </div>
   <% end %>
 

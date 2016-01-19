@@ -2,6 +2,7 @@
   <%= link_to "Sodata App", root_path, class: "item" %>
   <div class="right menu">
     <% if current_user %>
+      <%= link_to "View Maps", seattle_crime_path, class: "ui item" %>
       <%= link_to dashboard_path, class: "ui item" do %>
         Welcome, <%= current_user.first_name.titleize %>  <%= current_user.last_name.titleize %>
       <% end %>
