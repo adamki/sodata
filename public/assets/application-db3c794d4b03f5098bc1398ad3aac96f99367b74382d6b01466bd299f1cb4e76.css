@@ -38010,13 +38010,23 @@ a.large.button {
 
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
 #dashboard-card {
-  height: 730px;
+  height: 750px;
   overflow: scroll;
 }
 
 /* line 6, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
 #large-icon {
   font-size: 3em;
+}
+
+/* line 10, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+#bike-reg-prompt {
+  padding: 100px 20px 150px;
+}
+
+/* line 16, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+#bike-reg-modal {
+  padding: 50px 100px;
 }
 
 /* line 7, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
