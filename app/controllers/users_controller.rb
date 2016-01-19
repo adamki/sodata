@@ -4,6 +4,15 @@ class UsersController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    user = User.find(user_params[:id])
+    user.bikes.delete_all
+    user.delete
+    session.destroy
+    flash[:success] = "Account and All bikes hvae been removed"
+    redirect_to root_path
+  end
+
 
   private
 

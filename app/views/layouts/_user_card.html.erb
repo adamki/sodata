@@ -92,6 +92,14 @@
     <%= submit_tag "Everything Look OK?", class: "ui positive button" do %>
       <i class="checkmark icon"></i>
     <% end %>
+    <div class="ui small red basic icon buttons right aligned">
+      <%= link_to "Delete Account", 
+        current_user, 
+        class: "ui button", 
+        method: :delete, 
+        data: {confirm: "You sure?"}%>
+    </div>
   <% end %>
+
 
 </div>
