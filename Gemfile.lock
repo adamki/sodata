@@ -214,8 +214,6 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    skylight (0.10.1)
-      activesupport (>= 3.0.0)
     slop (3.6.0)
     soda-ruby (0.2.19)
       hashie (~> 3.4.2)
@@ -291,7 +289,6 @@ DEPENDENCIES
   shoulda (~> 3.5)
   shoulda-matchers (~> 2.0)
   simplecov
-  skylight
   soda-ruby
   turbolinks
   twilio-ruby (~> 4.2.1)
