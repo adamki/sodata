@@ -24,19 +24,19 @@ A good project idea should:
 
 ### Pitch
 
-Sodata App is a Crime Data Analysis Application that compares Real Crime Data and Open Data from Socrata API and Bureau of Labor API. The end goal is to provide valuable research and Data Anaylsis for Major US cities.
- 
+Sodata App provides a rich set of data from open.seattle.gov. We visual crime trends in the city of Seattle, WA and help bicycles users find safer timer and areas to park their bike.
+
 ### Problem
 
-Open Data has the potential to inform and educate the general public. I would like to build a relevant ant meaningful outlet for end-users to see real-time crime incidents in their general vicinity.
+Sometimes finding a decent bicycle rack is next to impossible. Sodata helps solve that by providing relevant tools to anybosy. We also allow users to sign up and regsitered their bike(s). If a bike does go missing, we can dispatch a "Bike Alert" to all fellow users to keep an eye out.
 
 ### Target Audience
 
-Just about anybody, in the supported cities will be able to monitor their neighborhood Crime levels and filter them by type and date.
+Just about anyone that uses a bicycle.
 
 ### Instructions
 
-If you would like to run this app int local production mode:
+If you would like to run this app in local production mode:
 
 `git clone git@github.com:adamki/sodata.git`
 `rails s`
