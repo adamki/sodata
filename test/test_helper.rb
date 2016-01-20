@@ -50,8 +50,11 @@ class ActiveSupport::TestCase
   end
 
   VCR.configure do |config|
-    config.cassette_library_dir = "fixtures/vcr_cassettes"
+    config.cassette_library_dir = "test/cassettes"
     config.hook_into :webmock # or :fakeweb
+    config.default_cassette_options = {
+      record: :once,
+    }
   end
 end
 

@@ -22,7 +22,8 @@ class BikesController < ApplicationController
   private
 
   def build_message(bike)
-    "Please be on the lookout for a '#{bike.model} #{bike.make}', serial number #{bike.serial_number} that was stolen on #{Time.now}"
+    "Please be on the lookout for a '#{bike.model} #{bike.make}', serial number #{bike.serial_number} 
+     that was stolen on #{Time.now}. Please email alerts@sodata.com with info"
   end
 
   def bike_params

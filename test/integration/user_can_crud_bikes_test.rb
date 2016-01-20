@@ -19,7 +19,7 @@ class UserCanCrudBikesTest < ActionDispatch::IntegrationTest
   end
 
   test "can add a bike" do
-    VCR.use_cassette("dashboard#add_bike") do
+    VCR.use_cassette("dashboard#add_bike_yea") do
       visit "/"
       click_link "Login"
       click_on "Add New Bike"
@@ -61,13 +61,14 @@ class UserCanCrudBikesTest < ActionDispatch::IntegrationTest
       add_bike
       assert_equal dashboard_path, current_path
 
-      within ".ui.list.bikes" do
-        first('#missing').click_link('Missing?')
-      end
-
       twilio = TwilioService.new
       message = "Please be on the look out for this missing bike."
       twilio.stubs(:build_sms).returns(message)
+      NotificationsMailer.any_instance.stubs(:send_stolen_alert).returns("Good Job")
+    
+      within ".ui.list.bikes" do
+        first('#missing').click_link('Missing?')
+      end
 
       assert_equal twilio.build_sms, message
       assert_equal dashboard_path, current_path

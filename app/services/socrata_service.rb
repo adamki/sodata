@@ -9,10 +9,10 @@ class SocrataService
     end
   end
 
-  def build_crimes(lat, lng)
+  def build_crimes(lat, lng, dist = 500, limit = 30)
     {
-      crimes: get_thefts(lat, lng),
-      times: with_crime_count(get_thefts(lat, lng)),
+      crimes: get_thefts(lat, lng, dist, limit),
+      times: with_crime_count(get_thefts(lat, lng, dist, limit)),
       racks: get_racks(lat, lng)
     }
   end
@@ -23,8 +23,8 @@ class SocrataService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_thefts(lat, lng, dist = 500)
-    thefts = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=30"
+  def get_thefts(lat, lng, dist = 500, limit = 30)
+    thefts = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=#{limit}"
     response = parse(thefts)
     filter_date_reported(response)
   end
@@ -91,7 +91,7 @@ class SocrataService
         response[:date_reported] = "10PM"
       when "23"
         response[:date_reported] = "11PM"
-      when "24"
+      when "00"
         response[:date_reported] = "12PM"
       end
     end

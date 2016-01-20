@@ -31,6 +31,8 @@ class UserCanViewdashboardTest < ActionDispatch::IntegrationTest
       socrata_service = SocrataService.new
       response = {bike_thefts: true}
       socrata_service.stubs(:bike_thefts).returns(response)
+      socrata_service.stubs(:parse).returns(response)
+      socrata_service.stubs(:get_racks).returns(response)
 
       assert_equal seattle_crime_path, current_path
       assert_equal response, socrata_service.bike_thefts
