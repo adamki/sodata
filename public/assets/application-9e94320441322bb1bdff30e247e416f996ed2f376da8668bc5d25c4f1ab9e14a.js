@@ -69972,12 +69972,12 @@ function addRacksToMap(racks, map){
     bindInfoWindow(rackMarker,
                    map,
                    infowindow,
-                    "<b> Rack Width:</b> " + racks[x].width + "<br>" 
-                   +"<b> Rack Type:</b> " + racks[x].finish_typ + "<br>"
-                   +"<b> Rack Manufacturer:</b> " + racks[x].manufactur + "<br>"
-                   +"<b> Rack Condition:</b> " + racks[x].asset_cond + "<br>"
-                   +"<b> Rack Location:</b> " + racks[x].unitdesc + "<br>"
-                   +"<b> Rack Capacity:</b> " + racks[x].rack_capac + "</b>");
+                    "<b> Rack Width:</b> " + racks[rack].width + "<br>" 
+                   +"<b> Rack Type:</b> " + racks[rack].finish_typ + "<br>"
+                   +"<b> Rack Manufacturer:</b> " + racks[rack].manufactur + "<br>"
+                   +"<b> Rack Condition:</b> " + racks[rack].asset_cond + "<br>"
+                   +"<b> Rack Location:</b> " + racks[rack].unitdesc + "<br>"
+                   +"<b> Rack Capacity:</b> " + racks[rack].rack_capac + "</b>");
     markers.push(rackMarker);
   }
 }
