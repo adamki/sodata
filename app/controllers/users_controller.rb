@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+
   def update
     User.update(user_params)
+    NotificationsMailer.send_update_email(current_user).deliver
     redirect_to dashboard_path
   end
 

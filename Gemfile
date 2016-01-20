@@ -22,6 +22,7 @@ gem 'hurley'
 gem "highcharts-rails", "~> 3.0.0"
 gem 'lodash-rails'
 gem 'twilio-ruby', '~> 4.2.1'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'rubocop', require: false
