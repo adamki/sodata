@@ -1,20 +1,26 @@
 class NotificationsMailer < ApplicationMailer
   default from: "from@example.com"
 
-  def send_update_email(user)
-    @user = user
-    mail( :to => @user.email,
-    :subject => 'Welcome to Sodata!' )
+  def client
+    client = SendGrid::Client.new(api_key: ENV['SENDGRID_API_KEY'])
   end
 
-  def send_stolen_alert(user, bike)
-    @sad_user = user
-    @bike = bike
-    @users = User.all
-    @users.each do |user|
-      @user = user
-      mail( :to => user.email,
-      :subject => 'ALERT! ALERT! STOLEN BIKE!' )
-    end
+  def send_update_email(user)
+    @user = user
+    mail( :to => @user.email, :subject => 'Welcome to Sodata!' )
   end
+
+  def send_stolen_alert
+    mail = SendGrid::Mail.new do |m|
+      m.to = User.pluck(:email)
+      m.from = 'alerts@sodata.com'
+      m.subject = "STOLEN BIKE ALERT! MISSING!!!"
+      m.text = "Please be on the lookout for stolen bike"
+    end
+
+    client.send(mail)
+  end
+
+
+
 end

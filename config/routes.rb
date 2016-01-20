@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:update, :destroy]
 
-  resources :seattle do
+  resources :seattle, only: [:bike_thefts] do
     get :bike_thefts, on: :collection
   end
 

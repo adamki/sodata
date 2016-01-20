@@ -7,9 +7,8 @@ class BikesController < ApplicationController
 
   def missing
     bike = Bike.find(bike_params[:id])
-    message = build_message(bike)
-    TwilioService.new.build_sms(message)
-    NotificationsMailer.send_stolen_alert(current_user, bike).deliver
+    TwilioService.new.build_sms(bike)
+    SendgridEmailWorker.perform_async
     redirect_to :back
   end
 
@@ -21,9 +20,6 @@ class BikesController < ApplicationController
 
   private
 
-  def build_message(bike)
-    "Please be on the lookout for a '#{bike.model} #{bike.make}', serial number #{bike.serial_number} that was stolen on #{Time.now}"
-  end
 
   def bike_params
     params.permit(:make, 

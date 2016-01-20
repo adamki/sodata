@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 20160118222617) do
     t.string   "gender"
     t.string   "uid"
     t.string   "email"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "raw_image"
     t.string   "phone_number"
-    t.boolean  "gets_alert"
+    t.boolean  "gets_alert",         default: false
   end
 
   add_foreign_key "bikes", "users"
