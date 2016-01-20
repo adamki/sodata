@@ -18,6 +18,9 @@ development:
   socrata_secret_token: EKMNsmmj285VnDA6JVndc0s3IIoVN4_eyO_M
   account_sid: AC9845dbc5be3683da7a04141c96d92056
   auth_token: b0ff9759dc48805a92ccc81c0169b922
+  SENDGRID_API_KEY: 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
+  SENDGRID_USERNAME: adamjensen
+  SENDGRID_PASSWORD: Stolen@2
 
 production:
   google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
@@ -26,6 +29,9 @@ production:
   socrata_secret_token: EKMNsmmj285VnDA6JVndc0s3IIoVN4_eyO_M
   account_sid: AC9845dbc5be3683da7a04141c96d92056
   auth_token: b0ff9759dc48805a92ccc81c0169b922
+  SENDGRID_API_KEY: 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
+  SENDGRID_USERNAME: adamjensen
+  SENDGRID_PASSWORD: Stolen@2
 
 test:
   google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
@@ -35,3 +41,6 @@ test:
   account_sid: AC9845dbc5be3683da7a04141c96d92056
   auth_token: b0ff9759dc48805a92ccc81c0169b922
   test_token: ya29.bgJnotjzfngkgaf6EvtGI_IWOFr1tUkv2ZWos6zIjAZ_ARac9REM0K_nUjtJAU6KlXxWRw
+  SENDGRID_API_KEY: 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
+  SENDGRID_USERNAME: adamjensen
+  SENDGRID_PASSWORD: Stolen@2

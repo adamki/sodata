@@ -83,14 +83,22 @@
                   <div class="content">
                     <div class="center">
                       <div class="ui inverted red large button">
-                        <%= link_to "See More", dashboard_path, class:  "no-link-style"%>
+                        <% if current_user %>
+                          <%= link_to "See More", dashboard_path, class: "no-link-style" %>
+                        <% else %>
+                          <%= link_to "See More", login_path, class: "no-link-style" %>
+                        <% end %>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="content">
-                <a href="/dashboard" class="header">Bike Registration</a>
+                <% if current_user %>
+                  <%= link_to "Bike Registration", dashboard_path, class: "no-link-style header" %>
+                <% else %>
+                  <%= link_to "Bike Registration", login_path, class: "no-link-style header" %>
+                <% end %>
               </div>
               <div class="extra content">
                 <p>

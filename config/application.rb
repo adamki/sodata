@@ -22,5 +22,9 @@ module Sodata
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    sendgrid = SendGrid::Client.new do |c|
+      c.api_key = ENV['SENDGRID_API_KEY']
+    end
   end
 end
