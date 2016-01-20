@@ -16,8 +16,16 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
 
       assert_equal dashboard_path, current_path
       assert page.has_content?("john doe's Profile")
+
+      fill_in "first_name", with: "Jorge"
+      fill_in "last_name", with: "Tellez"
       
+      response = {first_name: "Jorge", last_name: "Tellez"}
+      NotificationsMailer.any_instance.stubs(:send_update_email).returns(response)
+
       click_on "Update Account"
+
+      assert page.has_content?("Jorge Tellez's Profile")
       assert_equal dashboard_path, current_path
     end
   end
@@ -30,10 +38,14 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
 
       assert_equal dashboard_path, current_path
       assert page.has_content?("john doe's Profile")
-      
+
+      response = {first_name: "Jorge", last_name: "Tellez"}
+      NotificationsMailer.any_instance.stubs(:send_update_email).returns(response)
+
       fill_in "phone_number", with: "+1234567890"
       click_on "Update Account"
-      assert page.has_content?("+123456789")
+      
+      assert page.has_content?("+1234567890")
       assert_equal dashboard_path, current_path
     end
   end

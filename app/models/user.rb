@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   validates :first_name, 
-            :last_name, 
-            :google_profile_url, presence: true
+            :last_name, presence: true
   has_many :bikes
 
   def self.from_omniauth(auth)
