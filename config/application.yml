@@ -21,6 +21,7 @@ development:
   SENDGRID_API_KEY: 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
   SENDGRID_USERNAME: adamjensen
   SENDGRID_PASSWORD: Stolen@2
+  SKYLIGHT_AUTHENTICATION: m3gdpf9mKyAV7Vv-xuGyvQU10YpzuaJvqHpvwKnbobo
 
 production:
   google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
@@ -32,6 +33,7 @@ production:
   SENDGRID_API_KEY: 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
   SENDGRID_USERNAME: adamjensen
   SENDGRID_PASSWORD: Stolen@2
+  SKYLIGHT_AUTHENTICATION: m3gdpf9mKyAV7Vv-xuGyvQU10YpzuaJvqHpvwKnbobo
 
 test:
   google_client_id: 571421253422-617kkctqi1m5oel5lb0j3njff01tlqpe.apps.googleusercontent.com
@@ -44,3 +46,4 @@ test:
   SENDGRID_API_KEY: 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
   SENDGRID_USERNAME: adamjensen
   SENDGRID_PASSWORD: Stolen@2
+  SKYLIGHT_AUTHENTICATION: m3gdpf9mKyAV7Vv-xuGyvQU10YpzuaJvqHpvwKnbobo
