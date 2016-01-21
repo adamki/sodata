@@ -16,7 +16,7 @@ class UserLogsInWithGoogleTest < ActionDispatch::IntegrationTest
       click_link "Login"
 
       assert_equal dashboard_path, current_path
-      assert page.has_content?("john doe's Profile")
+      assert page.has_content?("John's Profile")
 
       click_link "Logout"
       click_link "Yes, I am ready."

@@ -9,26 +9,26 @@ class UserCanCrudBikesTest < ActionDispatch::IntegrationTest
   end
 
   def add_bike
-    click_on "Add New Bike"
+    click_on "Add A New Bike"
     fill_in "model", with: "Test Model"
     fill_in "make", with: "Test Make"
     fill_in "description", with: "Test Description"
     fill_in "serial_number", with: "Test Serial Number"
     select "Road", :from => "terrain"
-    click_on "Everything Look OK?"
+    click_on "Complete Registration"
   end
 
   test "can add a bike" do
     VCR.use_cassette("dashboard#add_bike_yea") do
       visit "/"
       click_link "Login"
-      click_on "Add New Bike"
+      click_on "Add A New Bike"
       fill_in "model", with: "Test Model"
       fill_in "make", with: "Test Make"
       fill_in "description", with: "Test Description"
       fill_in "serial_number", with: "Test Serial Number"
       select "Road", :from => "terrain"
-      click_on "Everything Look OK?"
+      click_on "Complete Registration"
 
       assert_equal dashboard_path, current_path
       assert page.has_content?("Test Model")

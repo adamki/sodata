@@ -1,6 +1,7 @@
 var renderGraph = function(results){
 
   $(function () {
+
     var times = results.times;
     $('#container').highcharts({
       chart:{
