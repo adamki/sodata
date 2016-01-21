@@ -23,7 +23,8 @@ gem "highcharts-rails", "~> 3.0.0"
 gem 'lodash-rails'
 gem 'twilio-ruby', '~> 4.2.1'
 gem 'sendgrid-ruby'
-gem 'skylight'
+gem 'skylight', '~> 0.10.2'
+
 group :development, :test do
   gem 'rubocop', require: false
   gem 'pry-rails'
