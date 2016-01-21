@@ -48,6 +48,9 @@
   color: #fff;
   background-color: #4d90fe;
   padding: 5px 11px 0px 11px;
+  label{
+    margin: 0px 5px;
+  }
 }
 
 #type-selector label {
@@ -55,3 +58,4 @@
   font-size: 13px;
   font-weight: 300;
 }
+

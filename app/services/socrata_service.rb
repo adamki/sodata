@@ -1,5 +1,5 @@
 class SocrataService
-  attr_reader :client, :conn
+  attr_reader :conn
 
   def initialize
     @conn = Faraday.new(:url => 'https://data.seattle.gov/') do |faraday|
@@ -9,11 +9,11 @@ class SocrataService
     end
   end
 
-  def build_crimes(lat, lng, dist = 500, limit = 30)
+  def build_crimes(lat, lng, dist, limit = 30)
     {
       crimes: get_thefts(lat, lng, dist, limit),
       times: with_crime_count(get_thefts(lat, lng, dist, limit)),
-      racks: get_racks(lat, lng)
+      racks: get_racks(lat, lng, dist)
     }
   end
 
@@ -23,13 +23,13 @@ class SocrataService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_thefts(lat, lng, dist = 500, limit = 30)
+  def get_thefts(lat, lng, dist, limit = 30)
     thefts = conn.get "resource/i47f-eseg.json?$where=within_circle(location,%20#{lat},%20#{lng},%20#{dist})&$limit=#{limit}"
     response = parse(thefts)
     filter_date_reported(response)
   end
 
-  def get_racks(lat, lng, dist = 700)
+  def get_racks(lat, lng, dist)
     racks = conn.get "resource/69v5-5c5g.json?$where=within_circle(rack_location,%20#{lat},%20#{lng},%20#{dist})"
     parse(racks)
   end

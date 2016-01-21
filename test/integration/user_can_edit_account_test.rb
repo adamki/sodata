@@ -15,7 +15,7 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
       click_link "Login"
 
       assert_equal dashboard_path, current_path
-      assert page.has_content?("john doe's Profile")
+      assert page.has_content?("John's Profile")
 
       fill_in "first_name", with: "Jorge"
       fill_in "last_name", with: "Tellez"
@@ -25,7 +25,7 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
 
       click_on "Update Account"
 
-      assert page.has_content?("Jorge Tellez's Profile")
+      assert page.has_content?("Jorge's Profile")
       assert_equal dashboard_path, current_path
     end
   end
@@ -37,7 +37,7 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
       click_link "Login"
 
       assert_equal dashboard_path, current_path
-      assert page.has_content?("john doe's Profile")
+      assert page.has_content?("John's Profile")
 
       response = {first_name: "Jorge", last_name: "Tellez"}
       NotificationsMailer.any_instance.stubs(:send_update_email).returns(response)
@@ -58,7 +58,7 @@ class UserCanEditAccountTest < ActionDispatch::IntegrationTest
       click_link "Login"
 
       assert_equal dashboard_path, current_path
-      assert page.has_content?("john doe's Profile")
+      assert page.has_content?("John's Profile")
       
       fill_in "email", with: "new_email@john.com"
       click_on "Update Account"
