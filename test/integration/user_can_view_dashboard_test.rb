@@ -19,24 +19,15 @@ class UserCanViewdashboardTest < ActionDispatch::IntegrationTest
   end
 
   test "dashboard#show" do
-    VCR.use_cassette("dashboard#show") do
-      visit "/"
-      click_link "Login"
-      click_on "View Maps"
-      
-      twilio = TwilioService.new
-      message = "Please be on the look out for this missing bike."
-      twilio.stubs(:build_sms).returns(message)
+    visit "/"
+    click_link "Login"
+    click_on "View Maps"
+    
+    assert_equal seattle_crime_path, current_path
 
-      socrata_service = SocrataService.new
-      response = {bike_thefts: true}
-      socrata_service.stubs(:bike_thefts).returns(response)
-      socrata_service.stubs(:parse).returns(response)
-      socrata_service.stubs(:get_racks).returns(response)
-
-      assert_equal seattle_crime_path, current_path
-      assert_equal response, socrata_service.bike_thefts
-    end
+    assert page.has_css?("input#pac-input")
+    assert page.has_css?("input#500")
+    assert page.has_css?("input#1250")
   end
 end
 
