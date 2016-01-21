@@ -38010,13 +38010,13 @@ a.large.button {
 
 /* line 1, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
 #dashboard-card {
-  height: 750px;
+  height: 850px;
   overflow: scroll;
 }
 
 /* line 6, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
 #large-icon {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /* line 10, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
@@ -38029,20 +38029,37 @@ a.large.button {
   padding: 50px 100px;
 }
 
-/* line 7, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
+/* line 20, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+.hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 25, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+#profile-pic {
+  padding-left: 100px;
+  padding-top: 25px;
+}
+
+/* line 30, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+.ui.tiny.image.circular {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 34, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/dashboard.scss */
+#user-stat-icons {
+  margin-top: -8px;
+  padding-right: 30px;
+}
+
+/* line 8, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
 .ui.secondary.pointing.menu {
   margin-bottom: 0px;
 }
 
-/* line 12, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
+/* line 13, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
 html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-}
-
-/* line 14, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/application.css.scss */
-.hover {
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
 }
