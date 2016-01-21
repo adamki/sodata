@@ -1,10 +1,10 @@
 <div class="ui segment red" id="dashboard-card">
-  <h2 class="ui center floated header blue">
-    <%= current_user.first_name %>'s Bikes
+  <h2 class="ui center aligned header blue">
+    <%= current_user.first_name.titleize %>'s Bikes
   </h2>
   </br>
   <h4 class="ui horizontal divider header">
-    <i class="empty heart icon"></i>
+    <i class="red empty heart icon"></i>
     Currently Registered
   </h4>
   
@@ -15,9 +15,9 @@
     <%= render partial: "layouts/bike_reg_prompt" %>
   <% end %>
 
-  <button class="ui blue button" id="modal-trigger">
-    <i class="add circle icon" style="font-size: 1.3em"></i>  
-    Add New Bike
+  <button class="ui icon button blue" id="modal-trigger">
+    <i class="add circle icon" style=""></i>  
+    Add A New Bike
   </button>
 </div>
 

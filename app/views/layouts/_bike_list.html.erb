@@ -1,25 +1,8 @@
 <% @bikes.each do |bike| %>
   </br>
-  </br>
-
-
   <div class="ui list bikes">
     <div class="item center aligned">
 
-    <div class="ui small basic icon buttons right aligned" id="delete">
-      <%= link_to "Delete?", 
-        bike, 
-        class: "ui button", 
-        method: :delete %>
-    </div>
-
-    <div class="ui small basic icon buttons right aligned" id="missing">
-      <%= link_to "Missing?", 
-        missing_bike_path(bike), 
-        class: "ui button", 
-        method: :post, 
-        data: {confirm: "Please Confirm?"}%>
-    </div>
       <h2 class="ui center aligned icon header">
         <% if bike.terrain == "Road" %>
           <i class="circular road icon bike" id="large-icon"></i>
@@ -28,28 +11,41 @@
         <% end %>
         <%= bike.model %> <%= bike.make %>
       </h2>
-      <div class="content center aligned">
-        <h2 class="ui sub header">
-          Description:
-        </h2>
-        <span>
-          <%= bike.description %>
-        </span>
+      <br>
 
-        <h2 class="ui sub header">
-          Serial Number:
-        </h2>
-        <span>
-          <%= bike.serial_number %>
-        </span>
+      <div class="content center floated">
+        <p>
+          <strong>Description:</strong>         <%= bike.description %>
+        </p>
 
-        <h2 class="ui sub header">
-          Type:
-        </h2>
-        <span>
-          <%= bike.terrain %>
-        </span>
+        <p>
+          <strong>Serial Number:</strong>       <%= bike.serial_number %>
+        </p>
+
+        <p>
+          <strong>Type:</strong>        <%= bike.terrain %>
+        </p>
+        <br>
+        <br>
       </div>
+
+      <div class="content right floated">
+        <div class="ui tiny basic icon buttons right aligned" id="delete">
+          <%= link_to "Delete?", 
+            bike, 
+            class: "ui button", 
+            method: :delete %>
+        </div>
+
+        <div class="ui tiny basic icon buttons right aligned" id="missing">
+          <%= link_to "Missing?", 
+            missing_bike_path(bike), 
+            class: "ui button", 
+            method: :post, 
+            data: {confirm: "Please Confirm?"}%>
+        </div>
+      </div>
+
     </div>
   </div>
   </br>
