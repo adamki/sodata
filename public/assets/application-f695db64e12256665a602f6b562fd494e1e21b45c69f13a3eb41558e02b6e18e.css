@@ -38000,8 +38000,12 @@ a.large.button {
   background-color: #4d90fe;
   padding: 5px 11px 0px 11px;
 }
+/* line 51, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+#type-selector label {
+  margin: 0px 5px;
+}
 
-/* line 53, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
+/* line 56, /Users/adamjensen/Turing/m3.1/w5/sodata/app/assets/stylesheets/map.scss */
 #type-selector label {
   font-family: Roboto;
   font-size: 13px;

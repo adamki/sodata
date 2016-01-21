@@ -69672,6 +69672,7 @@ Axis.prototype.beforePadding = function () {
 var renderGraph = function(results){
 
   $(function () {
+
     var times = results.times;
     $('#container').highcharts({
       chart:{
@@ -69811,6 +69812,7 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
   });
+
   var input = ( document.getElementById('pac-input'));
   var types = document.getElementById('type-selector');
 
@@ -69872,24 +69874,28 @@ function initMap() {
 function geocode(map){
   geocoder = new google.maps.Geocoder();
   var address = document.getElementById("pac-input").value;
+
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-
       var lat  = results[0].geometry.location.lat();
       var lng  = results[0].geometry.location.lng();
-
-      getAndPlotCoordinates(lat, lng, map);
+      var selected = $("input[type='radio'][name='option']:checked").val();
+      var radius =  parseInt(selected);
+      getAndPlotCoordinates(lat, lng, map, radius);
       } else {
       alert("Try searching for another location." + status);
     }
   });
+
 }
 
-var getAndPlotCoordinates = function(lat, lng, map){
+
+
+var getAndPlotCoordinates = function(lat, lng, map, radius){
   return $.ajax({
     type: "GET",
     url: "/seattle/bike_thefts",
-    data: {lat: lat, lng: lng},
+    data: {lat: lat, lng: lng, radius: radius},
     success: function(response){
 
       renderGraph(response);
@@ -69926,7 +69932,6 @@ function addCrimesToMap(places, map){
       position: crimeLatLng,
       title: places[x].offense_type,
     });
-    debugger
     bindInfoWindow(crimeMarker,
                    map,
                    infowindow,
@@ -69987,6 +69992,7 @@ function destroy(){
     markers[x].setMap(null);
   }
 }
+
 ;
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.

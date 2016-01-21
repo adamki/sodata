@@ -1,15 +1,21 @@
-<div class="ui column centered grid raised padded text segment" id="map-box">
-  <input id="pac-input" class="controls" type="text"
-    placeholder="Where would you like to Park your Bike?">
-  <div id="type-selector" class="controls">
-    <input type="radio" name="option" id="500" value=500 checked="checked">
-    <label for="500">500m</label>
+<% cache "map" do %>
+  <div class="ui column centered grid raised padded text segment" id="map-box">
 
-    <input type="radio" name="option" id="1250" value=1250>
-    <label for="1250">1250m</label>
+    <input id="pac-input" class="controls" type="text"
+      placeholder="Where would you like to Park your Bike?">
+
+    <div id="type-selector" class="controls">
+      <input type="radio" name="option" id="500" value=500 checked="checked">
+      <label for="500">500m</label>
+
+      <input type="radio" name="option" id="1250" value=1250>
+      <label for="1250">1250m</label>
+    </div>
+
+    <div id="map"></div>
+
   </div>
-  <div id="map"></div>
-</div>
+<% end %>
 
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
