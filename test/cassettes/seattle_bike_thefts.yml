@@ -1,0 +1,2329 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://data.seattle.gov/resource/i47f-eseg.json?$limit=30&$where=within_circle(location,%2047.612926,%20-122.336815,%20250)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 21 Jan 2016 18:12:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Last-Modified:
+      - Thu, 21 Jan 2016 09:29:33 PST
+      X-Soda2-Warning:
+      - X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated
+      X-Soda2-Fields:
+      - '["offense_code","offense_type","census_tract_2000",":updated_at","date_reported","location","occurred_date_range_end","zone_beat","district_sector","offense_code_extension","hundred_block_location","summarized_offense_description","general_offense_number","longitude","summary_offense_code",":id","latitude","rms_cdw_id","occurred_date_or_date_range_start",":created_at"]'
+      X-Soda2-Types:
+      - '["text","text","text","meta_data","calendar_date","location","calendar_date","text","text","text","text","text","text","number","text","meta_data","number","text","calendar_date","meta_data"]'
+      X-Soda2-Legacy-Types:
+      - 'true'
+      X-Socrata-Region:
+      - production
+      Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2002",
+          "date_reported" : "2016-01-07T21:23:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338150024",
+            "latitude" : "47.610973358"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "3XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "20168095",
+          "longitude" : "-122.338150024",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.610973358",
+          "rms_cdw_id" : "616702",
+          "occurred_date_or_date_range_start" : "2016-01-07T21:23:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7200.1064",
+          "date_reported" : "2016-01-15T15:41:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337966919",
+            "latitude" : "47.612422943"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "201617455",
+          "longitude" : "-122.337966919",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612422943",
+          "rms_cdw_id" : "617896",
+          "occurred_date_or_date_range_start" : "2016-01-04T14:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2016-01-07T16:42:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "20167598",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "616807",
+          "occurred_date_or_date_range_start" : "2016-01-04T12:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-29T10:28:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336288452",
+            "latitude" : "47.613128662"
+          },
+          "occurred_date_range_end" : "2015-12-28T14:30:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6 AV / OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015448795",
+          "longitude" : "-122.336288452",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613128662",
+          "rms_cdw_id" : "611642",
+          "occurred_date_or_date_range_start" : "2015-12-28T12:45:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7300.3034",
+          "date_reported" : "2015-12-23T11:54:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337394714",
+            "latitude" : "47.612663269"
+          },
+          "occurred_date_range_end" : "2015-12-23T11:30:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015443259",
+          "longitude" : "-122.337394714",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612663269",
+          "rms_cdw_id" : "601721",
+          "occurred_date_or_date_range_start" : "2015-12-23T11:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-12-18T21:12:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015438183",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "598860",
+          "occurred_date_or_date_range_start" : "2015-12-18T07:10:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1003",
+          "date_reported" : "2015-12-16T19:57:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336837769",
+            "latitude" : "47.612895966"
+          },
+          "occurred_date_range_end" : "2015-12-16T19:50:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "5XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015435831",
+          "longitude" : "-122.336837769",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612895966",
+          "rms_cdw_id" : "598069",
+          "occurred_date_or_date_range_start" : "2015-12-16T18:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-17T15:52:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "occurred_date_range_end" : "2015-12-17T14:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015436800",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "598037",
+          "occurred_date_or_date_range_start" : "2015-12-16T17:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-12-16T10:56:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336486816",
+            "latitude" : "47.611671448"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015435168",
+          "longitude" : "-122.336486816",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611671448",
+          "rms_cdw_id" : "598064",
+          "occurred_date_or_date_range_start" : "2015-12-15T18:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8100.2003",
+          "date_reported" : "2015-12-03T07:04:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338737488",
+            "latitude" : "47.612293243"
+          },
+          "occurred_date_range_end" : "2015-12-02T20:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / STEWART ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015419707",
+          "longitude" : "-122.338737488",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612293243",
+          "rms_cdw_id" : "589285",
+          "occurred_date_or_date_range_start" : "2015-12-02T19:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-03T11:43:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015419976",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "591611",
+          "occurred_date_or_date_range_start" : "2015-12-01T14:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-11-30T14:01:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337593079",
+            "latitude" : "47.611206055"
+          },
+          "occurred_date_range_end" : "2015-11-30T06:35:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "PINE ST / 4 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907940",
+          "longitude" : "-122.337593079",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611206055",
+          "rms_cdw_id" : "608153",
+          "occurred_date_or_date_range_start" : "2015-11-30T06:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8100.2001",
+          "date_reported" : "2015-11-28T20:58:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015414665",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "591027",
+          "occurred_date_or_date_range_start" : "2015-11-28T20:57:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1003",
+          "date_reported" : "2015-11-28T20:36:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.335830688",
+            "latitude" : "47.612632751"
+          },
+          "occurred_date_range_end" : "2015-11-28T15:50:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "16XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015907893",
+          "longitude" : "-122.335830688",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612632751",
+          "rms_cdw_id" : "607669",
+          "occurred_date_or_date_range_start" : "2015-11-28T15:50:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-11-23T15:49:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015409366",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "585311",
+          "occurred_date_or_date_range_start" : "2015-11-23T14:40:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-11-13T17:14:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "occurred_date_range_end" : "2015-11-13T14:30:00",
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907493",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "583285",
+          "occurred_date_or_date_range_start" : "2015-11-13T14:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-11-08T12:20:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336486816",
+            "latitude" : "47.611671448"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015390833",
+          "longitude" : "-122.336486816",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611671448",
+          "rms_cdw_id" : "579231",
+          "occurred_date_or_date_range_start" : "2015-11-08T12:20:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1006",
+          "date_reported" : "2015-11-04T13:35:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.333707532",
+            "latitude" : "47.612832198"
+          },
+          "occurred_date_range_end" : "2015-10-31T04:20:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907236",
+          "longitude" : "-122.333707532",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612832198",
+          "rms_cdw_id" : "575752",
+          "occurred_date_or_date_range_start" : "2015-10-31T03:50:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1005",
+          "date_reported" : "2015-10-31T15:14:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334915161",
+            "latitude" : "47.61164093"
+          },
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "15XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015381647",
+          "longitude" : "-122.334915161",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611640930",
+          "rms_cdw_id" : "576367",
+          "occurred_date_or_date_range_start" : "2015-10-30T17:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7200.1061",
+          "date_reported" : "2015-10-29T10:17:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337938768",
+            "latitude" : "47.614169186"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "19XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015378683",
+          "longitude" : "-122.337938768",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.614169186",
+          "rms_cdw_id" : "571761",
+          "occurred_date_or_date_range_start" : "2015-10-29T10:17:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-10-27T14:22:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-10-27T14:22:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015376332",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "570179",
+          "occurred_date_or_date_range_start" : "2015-10-27T14:22:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "7300.3029",
+          "date_reported" : "2015-10-14T19:36:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33461677",
+            "latitude" : "47.613826044"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015360022",
+          "longitude" : "-122.334616770",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613826044",
+          "rms_cdw_id" : "560769",
+          "occurred_date_or_date_range_start" : "2015-10-14T19:36:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2001",
+          "date_reported" : "2015-10-13T19:54:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338047717",
+            "latitude" : "47.611705677"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "16XX BLOCK OF 4 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015358894",
+          "longitude" : "-122.338047717",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611705677",
+          "rms_cdw_id" : "560504",
+          "occurred_date_or_date_range_start" : "2015-10-13T19:54:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "7300.3029",
+          "date_reported" : "2015-10-06T07:57:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33461677",
+            "latitude" : "47.613826044"
+          },
+          "occurred_date_range_end" : "2015-10-05T14:45:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015349187",
+          "longitude" : "-122.334616770",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613826044",
+          "rms_cdw_id" : "556548",
+          "occurred_date_or_date_range_start" : "2015-10-05T14:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-09-28T15:52:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334817763",
+            "latitude" : "47.612368448"
+          },
+          "occurred_date_range_end" : "2015-09-28T15:10:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015339717",
+          "longitude" : "-122.334817763",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612368448",
+          "rms_cdw_id" : "553620",
+          "occurred_date_or_date_range_start" : "2015-09-28T15:05:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-09-28T11:35:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-09-27T18:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015906258",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "553606",
+          "occurred_date_or_date_range_start" : "2015-09-27T17:45:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-09-21T12:25:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-09-21T11:20:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015906071",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "549705",
+          "occurred_date_or_date_range_start" : "2015-09-21T11:15:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-09-20T12:44:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337320424",
+            "latitude" : "47.611321238"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015329932",
+          "longitude" : "-122.337320424",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611321238",
+          "rms_cdw_id" : "547540",
+          "occurred_date_or_date_range_start" : "2015-09-20T12:44:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-09-14T11:07:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334817763",
+            "latitude" : "47.612368448"
+          },
+          "occurred_date_range_end" : "2015-09-14T07:45:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015322411",
+          "longitude" : "-122.334817763",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612368448",
+          "rms_cdw_id" : "547051",
+          "occurred_date_or_date_range_start" : "2015-09-13T21:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2002",
+          "date_reported" : "2015-09-13T00:20:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338146745",
+            "latitude" : "47.610975162"
+          },
+          "occurred_date_range_end" : "2015-09-12T23:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "3XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015321038",
+          "longitude" : "-122.338146745",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.610975162",
+          "rms_cdw_id" : "547058",
+          "occurred_date_or_date_range_start" : "2015-09-12T22:30:00"
+        }
+         ]
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 18:12:08 GMT
+- request:
+    method: get
+    uri: https://data.seattle.gov/resource/i47f-eseg.json?$limit=30&$where=within_circle(location,%2047.612926,%20-122.336815,%20250)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 21 Jan 2016 18:12:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Last-Modified:
+      - Thu, 21 Jan 2016 09:29:33 PST
+      X-Soda2-Warning:
+      - X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated
+      X-Soda2-Fields:
+      - '["offense_code","offense_type","census_tract_2000",":updated_at","date_reported","location","occurred_date_range_end","zone_beat","district_sector","offense_code_extension","hundred_block_location","summarized_offense_description","general_offense_number","longitude","summary_offense_code",":id","latitude","rms_cdw_id","occurred_date_or_date_range_start",":created_at"]'
+      X-Soda2-Types:
+      - '["text","text","text","meta_data","calendar_date","location","calendar_date","text","text","text","text","text","text","number","text","meta_data","number","text","calendar_date","meta_data"]'
+      X-Soda2-Legacy-Types:
+      - 'true'
+      X-Socrata-Region:
+      - production
+      Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2002",
+          "date_reported" : "2016-01-07T21:23:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338150024",
+            "latitude" : "47.610973358"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "3XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "20168095",
+          "longitude" : "-122.338150024",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.610973358",
+          "rms_cdw_id" : "616702",
+          "occurred_date_or_date_range_start" : "2016-01-07T21:23:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7200.1064",
+          "date_reported" : "2016-01-15T15:41:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337966919",
+            "latitude" : "47.612422943"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "201617455",
+          "longitude" : "-122.337966919",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612422943",
+          "rms_cdw_id" : "617896",
+          "occurred_date_or_date_range_start" : "2016-01-04T14:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2016-01-07T16:42:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "20167598",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "616807",
+          "occurred_date_or_date_range_start" : "2016-01-04T12:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-29T10:28:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336288452",
+            "latitude" : "47.613128662"
+          },
+          "occurred_date_range_end" : "2015-12-28T14:30:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6 AV / OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015448795",
+          "longitude" : "-122.336288452",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613128662",
+          "rms_cdw_id" : "611642",
+          "occurred_date_or_date_range_start" : "2015-12-28T12:45:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7300.3034",
+          "date_reported" : "2015-12-23T11:54:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337394714",
+            "latitude" : "47.612663269"
+          },
+          "occurred_date_range_end" : "2015-12-23T11:30:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / OLIVE WY",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015443259",
+          "longitude" : "-122.337394714",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612663269",
+          "rms_cdw_id" : "601721",
+          "occurred_date_or_date_range_start" : "2015-12-23T11:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-12-18T21:12:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015438183",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "598860",
+          "occurred_date_or_date_range_start" : "2015-12-18T07:10:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1003",
+          "date_reported" : "2015-12-16T19:57:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336837769",
+            "latitude" : "47.612895966"
+          },
+          "occurred_date_range_end" : "2015-12-16T19:50:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "5XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015435831",
+          "longitude" : "-122.336837769",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612895966",
+          "rms_cdw_id" : "598069",
+          "occurred_date_or_date_range_start" : "2015-12-16T18:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-17T15:52:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "occurred_date_range_end" : "2015-12-17T14:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015436800",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "598037",
+          "occurred_date_or_date_range_start" : "2015-12-16T17:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-12-16T10:56:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336486816",
+            "latitude" : "47.611671448"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015435168",
+          "longitude" : "-122.336486816",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611671448",
+          "rms_cdw_id" : "598064",
+          "occurred_date_or_date_range_start" : "2015-12-15T18:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8100.2003",
+          "date_reported" : "2015-12-03T07:04:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338737488",
+            "latitude" : "47.612293243"
+          },
+          "occurred_date_range_end" : "2015-12-02T20:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / STEWART ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015419707",
+          "longitude" : "-122.338737488",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612293243",
+          "rms_cdw_id" : "589285",
+          "occurred_date_or_date_range_start" : "2015-12-02T19:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-12-03T11:43:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334815979",
+            "latitude" : "47.612369537"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015419976",
+          "longitude" : "-122.334815979",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612369537",
+          "rms_cdw_id" : "591611",
+          "occurred_date_or_date_range_start" : "2015-12-01T14:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-11-30T14:01:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337593079",
+            "latitude" : "47.611206055"
+          },
+          "occurred_date_range_end" : "2015-11-30T06:35:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "PINE ST / 4 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907940",
+          "longitude" : "-122.337593079",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611206055",
+          "rms_cdw_id" : "608153",
+          "occurred_date_or_date_range_start" : "2015-11-30T06:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8100.2001",
+          "date_reported" : "2015-11-28T20:58:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015414665",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "591027",
+          "occurred_date_or_date_range_start" : "2015-11-28T20:57:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "8200.1003",
+          "date_reported" : "2015-11-28T20:36:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.335830688",
+            "latitude" : "47.612632751"
+          },
+          "occurred_date_range_end" : "2015-11-28T15:50:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "16XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015907893",
+          "longitude" : "-122.335830688",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612632751",
+          "rms_cdw_id" : "607669",
+          "occurred_date_or_date_range_start" : "2015-11-28T15:50:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-11-23T15:49:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015409366",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "585311",
+          "occurred_date_or_date_range_start" : "2015-11-23T14:40:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-11-13T17:14:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33731842",
+            "latitude" : "47.611320496"
+          },
+          "occurred_date_range_end" : "2015-11-13T14:30:00",
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907493",
+          "longitude" : "-122.337318420",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611320496",
+          "rms_cdw_id" : "583285",
+          "occurred_date_or_date_range_start" : "2015-11-13T14:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-11-08T12:20:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.336486816",
+            "latitude" : "47.611671448"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "5 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015390833",
+          "longitude" : "-122.336486816",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611671448",
+          "rms_cdw_id" : "579231",
+          "occurred_date_or_date_range_start" : "2015-11-08T12:20:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1006",
+          "date_reported" : "2015-11-04T13:35:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.333707532",
+            "latitude" : "47.612832198"
+          },
+          "occurred_date_range_end" : "2015-10-31T04:20:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015907236",
+          "longitude" : "-122.333707532",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612832198",
+          "rms_cdw_id" : "575752",
+          "occurred_date_or_date_range_start" : "2015-10-31T03:50:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1005",
+          "date_reported" : "2015-10-31T15:14:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334915161",
+            "latitude" : "47.61164093"
+          },
+          "zone_beat" : "M3",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "15XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015381647",
+          "longitude" : "-122.334915161",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611640930",
+          "rms_cdw_id" : "576367",
+          "occurred_date_or_date_range_start" : "2015-10-30T17:30:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "7200.1061",
+          "date_reported" : "2015-10-29T10:17:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337938768",
+            "latitude" : "47.614169186"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "19XX BLOCK OF 6 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015378683",
+          "longitude" : "-122.337938768",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.614169186",
+          "rms_cdw_id" : "571761",
+          "occurred_date_or_date_range_start" : "2015-10-29T10:17:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-10-27T14:22:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-10-27T14:22:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015376332",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "570179",
+          "occurred_date_or_date_range_start" : "2015-10-27T14:22:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "7300.3029",
+          "date_reported" : "2015-10-14T19:36:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33461677",
+            "latitude" : "47.613826044"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015360022",
+          "longitude" : "-122.334616770",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613826044",
+          "rms_cdw_id" : "560769",
+          "occurred_date_or_date_range_start" : "2015-10-14T19:36:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2001",
+          "date_reported" : "2015-10-13T19:54:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338047717",
+            "latitude" : "47.611705677"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "16XX BLOCK OF 4 AV",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015358894",
+          "longitude" : "-122.338047717",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611705677",
+          "rms_cdw_id" : "560504",
+          "occurred_date_or_date_range_start" : "2015-10-13T19:54:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-BICYCLE",
+          "census_tract_2000" : "7300.3029",
+          "date_reported" : "2015-10-06T07:57:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.33461677",
+            "latitude" : "47.613826044"
+          },
+          "occurred_date_range_end" : "2015-10-05T14:45:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "1",
+          "district_sector" : "M",
+          "hundred_block_location" : "7XX BLOCK OF OLIVE WY",
+          "summarized_offense_description" : "BIKE THEFT",
+          "general_offense_number" : "2015349187",
+          "longitude" : "-122.334616770",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.613826044",
+          "rms_cdw_id" : "556548",
+          "occurred_date_or_date_range_start" : "2015-10-05T14:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-09-28T15:52:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334817763",
+            "latitude" : "47.612368448"
+          },
+          "occurred_date_range_end" : "2015-09-28T15:10:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015339717",
+          "longitude" : "-122.334817763",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612368448",
+          "rms_cdw_id" : "553620",
+          "occurred_date_or_date_range_start" : "2015-09-28T15:05:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-09-28T11:35:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-09-27T18:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015906258",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "553606",
+          "occurred_date_or_date_range_start" : "2015-09-27T17:45:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2004",
+          "date_reported" : "2015-09-21T12:25:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337595939",
+            "latitude" : "47.611207077"
+          },
+          "occurred_date_range_end" : "2015-09-21T11:20:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4 AV / PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015906071",
+          "longitude" : "-122.337595939",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611207077",
+          "rms_cdw_id" : "549705",
+          "occurred_date_or_date_range_start" : "2015-09-21T11:15:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2000",
+          "date_reported" : "2015-09-20T12:44:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.337320424",
+            "latitude" : "47.611321238"
+          },
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "4XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015329932",
+          "longitude" : "-122.337320424",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.611321238",
+          "rms_cdw_id" : "547540",
+          "occurred_date_or_date_range_start" : "2015-09-20T12:44:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8200.1002",
+          "date_reported" : "2015-09-14T11:07:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.334817763",
+            "latitude" : "47.612368448"
+          },
+          "occurred_date_range_end" : "2015-09-14T07:45:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "6XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015322411",
+          "longitude" : "-122.334817763",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.612368448",
+          "rms_cdw_id" : "547051",
+          "occurred_date_or_date_range_start" : "2015-09-13T21:00:00"
+        }
+        , {
+          "offense_code" : "2399",
+          "offense_type" : "THEFT-OTH",
+          "census_tract_2000" : "8100.2002",
+          "date_reported" : "2015-09-13T00:20:00",
+          "location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338146745",
+            "latitude" : "47.610975162"
+          },
+          "occurred_date_range_end" : "2015-09-12T23:00:00",
+          "zone_beat" : "M2",
+          "offense_code_extension" : "3",
+          "district_sector" : "M",
+          "hundred_block_location" : "3XX BLOCK OF PINE ST",
+          "summarized_offense_description" : "OTHER PROPERTY",
+          "general_offense_number" : "2015321038",
+          "longitude" : "-122.338146745",
+          "summary_offense_code" : "2300",
+          "latitude" : "47.610975162",
+          "rms_cdw_id" : "547058",
+          "occurred_date_or_date_range_start" : "2015-09-12T22:30:00"
+        }
+         ]
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 18:12:08 GMT
+- request:
+    method: get
+    uri: https://data.seattle.gov/resource/69v5-5c5g.json?$where=within_circle(rack_location,%2047.612926,%20-122.336815,%20250)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 21 Jan 2016 18:12:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Last-Modified:
+      - Wed, 03 Dec 2014 14:44:48 PST
+      X-Soda2-Warning:
+      - X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated
+      X-Soda2-Fields:
+      - '["delineator","comptype","compkey","unitdesc","distance","unitid","longitude","bike_facil","surface_ty","unittype","mount_type","finish_typ","segkey",":updated_at","condition","width","manufactur","rack_capac","condition_","asset_cond","install_da","color","rack_location",":id","latitude","model_type","objectid",":created_at"]'
+      X-Soda2-Types:
+      - '["checkbox","number","number","text","number","text","number","text","text","text","text","text","number","meta_data","text","number","text","number","calendar_date","text","calendar_date","text","location","meta_data","number","text","number","meta_data"]'
+      X-Soda2-Legacy-Types:
+      - 'true'
+      X-Socrata-Region:
+      - production
+      Age:
+      - '2'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "finish_typ" : "GALV",
+          "segkey" : "7243",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-39",
+          "manufactur" : "BKR-ARCRE",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-07-17T00:00:00",
+          "compkey" : "516828",
+          "asset_cond" : "GOOD",
+          "distance" : "78",
+          "unitdesc" : "5TH AVE 0200 BLOCK NE SIDE (  58) 58 FT NW/O VIRGINIA ST",
+          "unitid" : "BKR-2012",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3393",
+            "latitude" : "47.6139"
+          },
+          "longitude" : "-122.3393",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6139",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "516828",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7243",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "39",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-10-14T00:00:00",
+          "compkey" : "516829",
+          "asset_cond" : "GOOD",
+          "distance" : "95",
+          "unitdesc" : "5TH AVE 0200 BLOCK SW SIDE (  77) 77 FT NW/O VIRGINIA ST",
+          "unitid" : "BKR-2775",
+          "color" : "NONE",
+          "install_da" : "2009-08-14T00:00:00",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3396",
+            "latitude" : "47.6138"
+          },
+          "longitude" : "-122.3396",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6138",
+          "model_type" : "BKR-CRRKB",
+          "objectid" : "516829",
+          "unittype" : "BKR",
+          "mount_type" : "STBS"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7237",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-30.69",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "516919",
+          "asset_cond" : "GOOD",
+          "distance" : "121",
+          "unitdesc" : "5TH AVE 0150 BLOCK NE SIDE ( 104) 104 FT NW/O PIKE ST",
+          "unitid" : "BKR-823",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3357",
+            "latitude" : "47.611"
+          },
+          "longitude" : "-122.3357",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.611",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "516919",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7237",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-30.69",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "516920",
+          "asset_cond" : "GOOD",
+          "distance" : "351",
+          "unitdesc" : "5TH AVE 0150 BLOCK NE SIDE ( 334) 67 FT SE/O PINE ST",
+          "unitid" : "BKR-824",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3362",
+            "latitude" : "47.6115"
+          },
+          "longitude" : "-122.3362",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6115",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "516920",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7239",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "17",
+          "manufactur" : "BKR-CORA",
+          "comptype" : "16",
+          "rack_capac" : "4",
+          "compkey" : "516921",
+          "asset_cond" : "GOOD",
+          "distance" : "324",
+          "unitdesc" : "5TH AVE 0160 BLOCK SW SIDE ( 311) 89 FT SE/O OLIVE WAY",
+          "unitid" : "BKR-1231",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3372",
+            "latitude" : "47.6124"
+          },
+          "longitude" : "-122.3372",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6124",
+          "model_type" : "BKR-W2704",
+          "objectid" : "516921",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7883",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-32",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517111",
+          "asset_cond" : "GOOD",
+          "distance" : "337",
+          "unitdesc" : "6TH AVE 0150 BLOCK NE SIDE ( 318) 62 FT SE/O PINE ST",
+          "unitid" : "BKR-990",
+          "color" : "NONE",
+          "install_da" : "2008-11-06T00:00:00",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3351",
+            "latitude" : "47.612"
+          },
+          "longitude" : "-122.3351",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.612",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517111",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "7888",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-38",
+          "manufactur" : "BKR-CORA",
+          "comptype" : "16",
+          "rack_capac" : "8",
+          "compkey" : "517112",
+          "asset_cond" : "GOOD",
+          "distance" : "185",
+          "unitdesc" : "6TH AVE 0193 BLOCK NE SIDE (  94) 106 FT SE/O VIRGINIA ST",
+          "unitid" : "BKR-2034",
+          "color" : "BRN",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.338",
+            "latitude" : "47.6144"
+          },
+          "longitude" : "-122.338",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6144",
+          "model_type" : "BKR-W4508",
+          "objectid" : "517112",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "6136",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "34",
+          "manufactur" : "BKR-ARCRE",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517232",
+          "asset_cond" : "GOOD",
+          "distance" : "79",
+          "unitdesc" : "4TH AVE 0190 BLOCK SW SIDE (  57) 57 FT NW/O STEWART ST",
+          "unitid" : "BKR-2036",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3391",
+            "latitude" : "47.6124"
+          },
+          "longitude" : "-122.3391",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6124",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517232",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12218",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-27",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517331",
+          "asset_cond" : "GOOD",
+          "distance" : "90",
+          "unitdesc" : "PINE ST 0050 BLOCK SE SIDE (  70) 70 FT NE/O 5TH AVE",
+          "unitid" : "BKR-573",
+          "color" : "NONE",
+          "install_da" : "2002-01-15T00:00:00",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3361",
+            "latitude" : "47.6117"
+          },
+          "longitude" : "-122.3361",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6117",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517331",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "517332",
+          "asset_cond" : "GOOD",
+          "distance" : "62",
+          "unitdesc" : "PINE ST 0060 BLOCK NW SIDE (  44) 44 FT NE/O 6TH AVE",
+          "unitid" : "BKR-1232",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3352",
+            "latitude" : "47.6123"
+          },
+          "longitude" : "-122.3352",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6123",
+          "model_type" : "BKR-RIBON",
+          "objectid" : "517332",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "517333",
+          "asset_cond" : "GOOD",
+          "distance" : "122",
+          "unitdesc" : "PINE ST 0060 BLOCK NW SIDE ( 104) 104 FT NE/O 6TH AVE",
+          "unitid" : "BKR-1233",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.335",
+            "latitude" : "47.6124"
+          },
+          "longitude" : "-122.335",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6124",
+          "model_type" : "BKR-RIBON",
+          "objectid" : "517333",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-31",
+          "manufactur" : "BKR-ARCRE",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517334",
+          "asset_cond" : "GOOD",
+          "distance" : "174",
+          "unitdesc" : "PINE ST 0060 BLOCK SE SIDE ( 156) 120 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1242",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3347",
+            "latitude" : "47.6123"
+          },
+          "longitude" : "-122.3347",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6123",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517334",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "517335",
+          "asset_cond" : "GOOD",
+          "distance" : "275",
+          "unitdesc" : "PINE ST 0060 BLOCK NW SIDE ( 257) 19 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1243",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3345",
+            "latitude" : "47.6126"
+          },
+          "longitude" : "-122.3345",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6126",
+          "model_type" : "BKR-RIBTP",
+          "objectid" : "517335",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "517336",
+          "asset_cond" : "GOOD",
+          "distance" : "258",
+          "unitdesc" : "PINE ST 0060 BLOCK NW SIDE ( 240) 36 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1244",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3346",
+            "latitude" : "47.6126"
+          },
+          "longitude" : "-122.3346",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6126",
+          "model_type" : "BKR-RIBTP",
+          "objectid" : "517336",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12219",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "517337",
+          "asset_cond" : "GOOD",
+          "distance" : "228",
+          "unitdesc" : "PINE ST 0060 BLOCK NW SIDE ( 210) 66 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1245",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3347",
+            "latitude" : "47.6125"
+          },
+          "longitude" : "-122.3347",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6125",
+          "model_type" : "BKR-RIBTP",
+          "objectid" : "517337",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "13313",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "31",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-07-15T00:00:00",
+          "compkey" : "517619",
+          "asset_cond" : "GOOD",
+          "distance" : "110",
+          "unitdesc" : "VIRGINIA ST 0040 BLOCK NW SIDE (  83) 83 FT NE/O 4TH AVE",
+          "unitid" : "BKR-1945",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3398",
+            "latitude" : "47.6133"
+          },
+          "longitude" : "-122.3398",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6133",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517619",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "13313",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "31",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-07-15T00:00:00",
+          "compkey" : "517620",
+          "asset_cond" : "GOOD",
+          "distance" : "252",
+          "unitdesc" : "VIRGINIA ST 0040 BLOCK NW SIDE ( 225) 71 FT SW/O 5TH AVE",
+          "unitid" : "BKR-1946",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3395",
+            "latitude" : "47.6136"
+          },
+          "longitude" : "-122.3395",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6136",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517620",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "13316",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-24",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-07-15T00:00:00",
+          "compkey" : "517656",
+          "asset_cond" : "GOOD",
+          "distance" : "55.69",
+          "unitdesc" : "VIRGINIA ST 0065 BLOCK SE SIDE (  41) 42 FT SW/O 7TH AVE",
+          "unitid" : "BKR-896",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3375",
+            "latitude" : "47.6149"
+          },
+          "longitude" : "-122.3375",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6149",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517656",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12900",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "30",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517755",
+          "asset_cond" : "GOOD",
+          "distance" : "87",
+          "unitdesc" : "STEWART ST 0040 BLOCK NW SIDE (  61) 61 FT NE/O 4TH AVE",
+          "unitid" : "BKR-1301",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3386",
+            "latitude" : "47.6125"
+          },
+          "longitude" : "-122.3386",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6125",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517755",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12900",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-30",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517756",
+          "asset_cond" : "GOOD",
+          "distance" : "194",
+          "unitdesc" : "STEWART ST 0040 BLOCK SE SIDE ( 164) 112 FT SW/O 5TH AVE",
+          "unitid" : "BKR-1302",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3381",
+            "latitude" : "47.6126"
+          },
+          "longitude" : "-122.3381",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6126",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517756",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12903",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-30",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517757",
+          "asset_cond" : "GOOD",
+          "distance" : "42",
+          "unitdesc" : "STEWART ST 0060 BLOCK SE SIDE (  24) 24 FT NE/O 6TH AVE",
+          "unitid" : "BKR-1303",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3368",
+            "latitude" : "47.6137"
+          },
+          "longitude" : "-122.3368",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6137",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517757",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12903",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "33",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517758",
+          "asset_cond" : "GOOD",
+          "distance" : "199",
+          "unitdesc" : "STEWART ST 0060 BLOCK NW SIDE ( 178) 104 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1304",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3366",
+            "latitude" : "47.6141"
+          },
+          "longitude" : "-122.3366",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6141",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517758",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12042",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "31",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "517901",
+          "asset_cond" : "GOOD",
+          "distance" : "54",
+          "unitdesc" : "OLIVE WAY 0040 BLOCK NW SIDE (  31) 31 FT NE/O 4TH AVE",
+          "unitid" : "BKR-1300",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3384",
+            "latitude" : "47.6123"
+          },
+          "longitude" : "-122.3384",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6123",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "517901",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "7242",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "34",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "compkey" : "518670",
+          "asset_cond" : "GOOD",
+          "distance" : "258",
+          "unitdesc" : "5TH AVE 0190 BLOCK SW SIDE ( 238) 162 FT SE/O VIRGINIA ST",
+          "unitid" : "BKR-2035",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3387",
+            "latitude" : "47.6134"
+          },
+          "longitude" : "-122.3387",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6134",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "518670",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12044",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "-27",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "compkey" : "519233",
+          "asset_cond" : "GOOD",
+          "distance" : "220",
+          "unitdesc" : "OLIVE WAY 0060 BLOCK SE SIDE ( 200) 76 FT SW/O 7TH AVE",
+          "unitid" : "BKR-1305",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3355",
+            "latitude" : "47.6134"
+          },
+          "longitude" : "-122.3355",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6134",
+          "model_type" : "BKR-RIBON",
+          "objectid" : "519233",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12044",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "30",
+          "manufactur" : "BKR-ARCRE",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-08-27T00:00:00",
+          "compkey" : "519234",
+          "asset_cond" : "GOOD",
+          "distance" : "240",
+          "unitdesc" : "OLIVE WAY 0060 BLOCK NW SIDE ( 225) 51 FT SW/O 7TH AVE",
+          "unitid" : "BKR-2855",
+          "color" : "NONE",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3355",
+            "latitude" : "47.6135"
+          },
+          "longitude" : "-122.3355",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6135",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "519234",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "GALV",
+          "segkey" : "12044",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "30",
+          "manufactur" : "BKR-CRMTL",
+          "comptype" : "16",
+          "rack_capac" : "2",
+          "condition_" : "2009-08-27T00:00:00",
+          "compkey" : "519235",
+          "asset_cond" : "GOOD",
+          "distance" : "226",
+          "unitdesc" : "OLIVE WAY 0060 BLOCK NW SIDE ( 211) 65 FT SW/O 7TH AVE",
+          "unitid" : "BKR-667",
+          "color" : "NONE",
+          "install_da" : "2008-04-15T00:00:00",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3356",
+            "latitude" : "47.6135"
+          },
+          "longitude" : "-122.3356",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.6135",
+          "model_type" : "BKR-RLRCK",
+          "objectid" : "519235",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+        , {
+          "finish_typ" : "PAINT",
+          "segkey" : "12045",
+          "condition" : "GOOD",
+          "delineator" : false,
+          "width" : "29",
+          "manufactur" : "OTHER",
+          "comptype" : "16",
+          "rack_capac" : "3",
+          "condition_" : "2009-08-27T00:00:00",
+          "compkey" : "519236",
+          "asset_cond" : "GOOD",
+          "distance" : "216",
+          "unitdesc" : "OLIVE WAY 0070 BLOCK NW SIDE ( 196) 80 FT SW/O HOWELL ST",
+          "unitid" : "BKR-2895",
+          "color" : "BLK",
+          "rack_location" : {
+            "needs_recoding" : false,
+            "longitude" : "-122.3345",
+            "latitude" : "47.614"
+          },
+          "longitude" : "-122.3345",
+          "surface_ty" : "PCC",
+          "bike_facil" : "SGL",
+          "latitude" : "47.614",
+          "model_type" : "BKR-RIBTP",
+          "objectid" : "519236",
+          "unittype" : "BKR",
+          "mount_type" : "SUFMT"
+        }
+         ]
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 18:12:09 GMT
+recorded_with: VCR 3.0.0
