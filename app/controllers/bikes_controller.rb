@@ -9,7 +9,6 @@ class BikesController < ApplicationController
     bike = Bike.find(bike_params[:id])
     message = build_message(bike)
     TwilioService.new.build_sms(message)
-    NotificationsMailer.send_stolen_alert(current_user, bike).deliver
     redirect_to :back
   end
 
