@@ -1,8 +1,7 @@
 <div class="ui segment red" id="dashboard-card">
-  <h2 class="ui center floated header blue">
-    <%= current_user.first_name %> <%= current_user.last_name%>'s Profile
+  <h2 class="ui center aligned header blue">
+    <%= current_user.first_name.titleize %>'s Profile
   </h2>
-
   </br>
   <h4 class="ui horizontal divider header">
     <i class="user icon"></i>
@@ -10,12 +9,12 @@
   </h4>
 
   <div class="ui divided items"> </br>
-    <div class="image left floated right aligned">
+    <div class="image left floated right aligned" id="profile-pic">
       <a href="#" class="ui tiny image circular">
         <img src="<%= image_url current_user.raw_image %>" class="ui tiny image">
       </a>
 
-      <div class="ui list right floated left aligned">
+      <div class="ui list right floated left aligned" id="user-stat-icons">
         <div class="item">
           <i class="volume up icon"></i>
           <div class="content">
@@ -93,7 +92,7 @@
     </br>
     </br>
 
-    <%= submit_tag "Update Account", class: "ui positive button blue" do %>
+    <%= submit_tag "Update Account", class: "ui icon button blue" do %>
       <i class="checkmark icon"></i>
     <% end %>
     <div class="ui small red basic icon buttons right aligned">
